@@ -14,7 +14,7 @@
 \title{\textbf{ENG1456 - Redes Neurais - Trabalho 1 Classificação}}
 \author{\textbf{Aluno: Matheus Carneiro Nogueira}}
 \affil{}
-\author{\textbf{Professora: Marley}}
+\author{\textbf{Professora: Marley Velasco}}
 \affil{}
 \pagestyle{fancy}
 \fancyhf{}
@@ -29,12 +29,18 @@
 	\tableofcontents
 	
 \begin{abstract}
-	Este documento consiste no relatório do trabalho 1 do módulo de Redes Neurais da disciplina ENG1456 da PUC-Rio. Nele será explicada a implementação de modelos de Redes Neurais MLP para a clafficicação do dataset Ionosphere, disponibilizado pela professora da disciplina. Esta classificação é binária e visa separar as antenas do dataset em "good" ou "bad". A seções do relatório são definidas de acordo com as perguntas principais que constam no arquivo Guia de Atividades.
+	Este documento consiste no relatório do trabalho 1 do módulo de Redes Neurais da disciplina ENG1456 da PUC-Rio. Nele será explicada a implementação de modelos de Redes Neurais MLP para a clafficicação do dataset Ionosphere, disponibilizado pela professora da disciplina e disponível em \cite{Dataset}. A seções do relatório são definidas de acordo com as perguntas principais que constam no arquivo Guia de Atividades.
 \end{abstract}
 
-\section{Compreemsão do problema e análise de variáveis}
+\section{Apresentação do dataset}
+
+Com o intuito de criar um modelo de rede neural para classificar o dataset \textit{Ionosphere}, é essencial que, antes de implementar a rede, estudemos o dataset em si. Como descrito no artigo \cite{Paper1989} e pelas informação disponibilizadas em \cite{Dataset}, este dataset consiste no sistema de radares da região de Goose Bay, Labrador, o qual possui 16 antenas de alta frequência. O alvo dessas antenas foram elétrons livres na Ionosfera e, bons retornos do radas consistem em retornos que indicam alguma estrutura na ionosfera, enquanto mals retornos são aqueles cujo sinal passa livre pela Ionosfera e nao retorna. É, justamente, esta classificação que a Rede Neural desenvolvida neste trabalho almeja realizar, separar as entradas em "good" ou "bad". Com isso, notamos que a rede pode possuir uma saída única, que mapeia \textbf{completar relacao entre 1 e 0 e good e bad}.
+
+\section{Compreensão do problema e análise de variáveis}
 
 \subsection{Observe a base de dados do problema. Existem variáveis que podem ser	eliminadas do dataset? Justifique.}
+
+Ao analisar as colunas do dataset, percebe-se que as duas primeiras colunas, \textit{info\_1} e \textit{info\_2} aparentam ser colunas inteiramente de 1 e 0, respectivamente. Para ter certeza, uma vez que observar apenas o head e tail não é suficiente, as colunas inteiras foram analisadas e confirmou-se que a segunda coluna, \textit{info\_1} de fato é inteiramente de 0. Sendo assim, é recomendável que ela seja excluída do dataset pois, além de não trazer nenhuma informação útil à classificação dos retornos de rádio, essa informação pode atrapalhar o treinamento da rede, uma vez que ambos os retornos bons e ruins apresentam valor 0 neste atributo.
 
 \subsection{Implemente técnicas de visualização de dados e seleção de variáveis para extrair características importantes sobre a base de dados. Explique	a motivação destas técnicas e o que é possível inferir dos resultadosobtidos.}
 
@@ -62,4 +68,18 @@
 
 \subsection{Faça análises e novas implementações que você julgue importante para o seu trabalho. Não esqueça de explicar a motivação da análise realizada.}
 
+
+\begin{thebibliography}{99} 
+	
+	\bibitem{Dataset} 
+	UCI Machine Learning Repository,\\ \texttt{https://archive.ics.uci.edu/ml/datasets/Ionosphere}
+	
+	\bibitem{Paper1989} Sigillito, V. G., Wing, S. P., Hutton, L. V., \& Baker, K. B. (1989). \textit{Classification of radar returns from the ionosphere using neural networks.} Johns Hopkins APL Technical Digest, 10, 262-266.
+	
+	
+	
+	
+	
+	
+\end{thebibliography}
 \end{document}
