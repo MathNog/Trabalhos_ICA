@@ -1,0 +1,15 @@
+\babel@toc {brazil}{}
+\contentsline {section}{\numberline {1}Compreemsão do problema e análise de variáveis}{3}%
+\contentsline {subsection}{\numberline {1.1}Observe a base de dados do problema. Existem variáveis que podem ser eliminadas do dataset? Justifique.}{3}%
+\contentsline {subsection}{\numberline {1.2}Implemente técnicas de visualização de dados e seleção de variáveis para extrair características importantes sobre a base de dados. Explique a motivação destas técnicas e o que é possível inferir dos resultadosobtidos.}{3}%
+\contentsline {section}{\numberline {2}Treinamento do modelo de Rede Neural}{3}%
+\contentsline {subsection}{\numberline {2.1}Com as configurações do modelo MLP previamente definidas no script, faça o treinamento da Rede Neural sem normalizar os atributos numéricos. Comente o resultado obtido, baseado nas métricas de avaliação disponíveis (acurácia, precision, recall, F1-Score, Matriz de confusão, etc.)}{3}%
+\contentsline {subsection}{\numberline {2.2}Agora normalize os dados de entrada e treine novamente o modelo MLP. Avalie os resultados obtidos e comente o efeito da normalização no treinamento da Rede Neural.}{3}%
+\contentsline {section}{\numberline {3}Mudança de configurações do modelo}{3}%
+\contentsline {subsection}{\numberline {3.1}Insira o conjunto de validação para o treinamento do modelo. Avalie o resultado obtido.}{3}%
+\contentsline {subsection}{\numberline {3.2}Modifique o tempo de treinamento (épocas) da Rede Neural. Escolha dois valores distintos (e.g. 1 e 1000 épocas) e avalie os resultados.}{3}%
+\contentsline {subsection}{\numberline {3.3}Modifique a taxa de aprendizado da Rede Neural. Escolha dois valores distintos (e.g. 0,001 e 0,1) e avalie os resultados.}{3}%
+\contentsline {subsection}{\numberline {3.4}Modifique a quantidade de neurônios na camada escondida da RedecNeural. Escolha dois valores distintos (e.g. 2 e 70 neurônios) e avalie os resultados.}{3}%
+\contentsline {section}{\numberline {4}Teste Livre}{3}%
+\contentsline {subsection}{\numberline {4.1}Faça novos testes para avaliar o desempenho da Rede Neural no problema designado. Use a técnica K-Fold (com K = 10) para analisar o resultado obtido.}{3}%
+\contentsline {subsection}{\numberline {4.2}Faça análises e novas implementações que você julgue importante para o seu trabalho. Não esqueça de explicar a motivação da análise realizada.}{3}%
