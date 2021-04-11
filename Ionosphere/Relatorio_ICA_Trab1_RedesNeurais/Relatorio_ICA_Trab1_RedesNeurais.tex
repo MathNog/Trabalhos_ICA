@@ -80,7 +80,17 @@ O modelo em questão apresentou acurácia de 92\%, o que, a priori, é bom, vide
 
 A precisão de nosso modelo foi de 0.96 para os casos zero, isto é, "bad" e de 0.89 para 1, "good". Isso nos mostra que a rede possui um grande desempenho em classificar corretamente os retornos ruins e um desempenho um pouco pior em classificar os retornos bons. Isso é curioso uma vez que a nossa base de treino foi composta de 182 entradas 1 e 98 entradas 0, o que mostra que nossos dados são razoavelmente desbalanceados. Uma solução possível para melhorar essa métrica é construir a base de treino de outra forma, garantindo maior equilíbrio entre os retornos bons e ruins. Na seção \ref{testelivre} faremos esse teste. Para a situação deste dataset, podemos argumentar que é melhor a rede classificar um retorno bom como ruim do que um retorno ruim como bom, uma vez que este segundo erro poderia causar a utilização de uma antena defeituosa, o que é mais prejudicial que não utilizar uma antena em bom funcionamento. Sendo assim, a rede indicar uma precisão maior para os retornos ruins é melhor do que o caso contrário, se ela apresentasse precisão menor para retornos ruins.
 
-A métrica recall indica
+A métrica recall indica quanto a rede acertou a classificação de uma entrada da classe 0, por exemplo, em relação ao número de entradas da classe 0. É justamente o recall que nós podemos observar na matriz de confusão da figura \ref{fig:resultadonaonormalizado}. Nosso resultado indica que, em 82\% dos casos em que o retorno era ruim, nosso modelo acertou que ele era ruim e, em 98\% dos casos em que o retorno era bom, a rede  classificou corretamente que era bom. Esta métrica usada em conjunto com a precisão é útil para avaliar o quão preciso é nosso modelo em classificar corretamente as entradas em relação à classe correta da entrada. Como nossa precisão é maior para a classe "ruim" e o recall é menor para essa mesma classe, podemos ter maior confiança do que se ambas as métricas fossem maiores para uma classe específica, o que indicaria que nosso modelo não é muito bom em classificar a entrada nesta classe.
+
+Por fim, o F1-score  indica a média harmônica entre a Precisão e o Recall. \textbf{Completar, não entendi muito bem!!}
+
+A figura abaixo indica a matriz de confusão relativa de nosso modelo. Como nós já comentamos sobre ela e sobre a métrica Recall, aqui apenas consta um resumo de sua interpretação.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\linewidth]{Imagens/ConfusionMatrizNaoNormalizado}
+	\caption{82\% das entradas ruins foram classificadas como ruins e 98\% das boas foram classificadas como boas}
+	\label{fig:confusionmatriznaonormalizado}
+\end{figure}
 
 
 \subsection{Agora normalize os dados de entrada e treine novamente o modelo MLP.	Avalie os resultados obtidos e comente o efeito da normalização no	treinamento da Rede Neural.}

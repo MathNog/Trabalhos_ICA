@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  11 APR 2021 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  11 APR 2021 20:06
 entering extended mode
 **./Relatorio_ICA_Trab1_RedesNeurais.tex
 (Relatorio_ICA_Trab1_RedesNeurais.tex
@@ -360,6 +360,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: Reference `testelivre' on page 5 undefined on input line 81.
 
+<Imagens/ConfusionMatrizNaoNormalizado.png, id=26, 293.59688pt x 240.14719pt>
+File: Imagens/ConfusionMatrizNaoNormalizado.png Graphic file (type png)
+<use Imagens/ConfusionMatrizNaoNormalizado.png>
+Package pdftex.def Info: Imagens/ConfusionMatrizNaoNormalizado.png  used on inp
+ut line 90.
+(pdftex.def)             Requested size: 227.62206pt x 186.18175pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -368,7 +374,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5]
+[5 <./Imagens/ConfusionMatrizNaoNormalizado.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -383,10 +389,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4055 strings out of 479321
- 58065 string characters out of 2856584
- 384535 words of memory out of 3000000
- 21469 multiletter control sequences out of 15000+600000
+ 4065 strings out of 479321
+ 58451 string characters out of 2856584
+ 384543 words of memory out of 3000000
+ 21478 multiletter control sequences out of 15000+600000
  410088 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,74p,1174b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -397,10 +403,10 @@ ublic/amsfonts/cm/cmr10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><C:/Users/matno/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/matno/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Relatorio_ICA_Trab1_RedesNeurais.pdf (6 pages, 964439 bytes).
+Output written on Relatorio_ICA_Trab1_RedesNeurais.pdf (6 pages, 973762 bytes).
 
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
+ 54 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
