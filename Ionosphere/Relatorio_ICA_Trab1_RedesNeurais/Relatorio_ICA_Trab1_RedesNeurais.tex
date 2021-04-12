@@ -120,7 +120,19 @@ A acurácia do modelo normalizado é maior que a do modelo não normalizado. Obt
 
 Ambas as precisões das classes "ruim" e "boa" aumentaram. A precisão da classe 0 (ruim) aumentou de 0.96 para 1.0 e a classe 1 (boa) aumentou de 0.89 para 0.91. Isso quer dizer que a rede cujas entradas foram normalizadas se mostrou a rede não classificou nenhuma entrada ruim como boa e classificou apenas 0.09 entradas boas como ruins. Esse fato aumenta a confiabilidade desta rede em relação à anterior.
 
-O recall, de modo similar à precisão, também aumentou seus valores. Para a classe "ruim" o modelo apresentou uma evolução de 0.82 para 0.86 e, para a classe "boa", de 0.98 para 1. Novamente, isso quer dizer que este modelo 
+O recall, de modo similar à precisão, também aumentou seus valores. Para a classe "ruim" o modelo apresentou uma evolução de 0.82 para 0.86 e, para a classe "boa", de 0.98 para 1. Novamente, isso quer dizer que este modelo é mais confiável em relação ao erro de classificação positiva.
+
+O F1-score também aumentou para ambas as classes. Para a classe "ruim" houve um aumento de 0.88 para 0.92 e, para a classe "boa", de 0.93 para 0.96. Esse resultado não é uma surpresa, pois, se ambas as métricas de precisão e recall aumentaram para ambas as classes, é claro que a média harmônica entre elas também aumentaria. Este resultado apenas confirma as conclusões anteriores: o modelo com dados normalizados de entrada mostra-se mais precisa na classificação de padrões para este dataset.
+
+Novamente, a figura a seguir exibe a Matriz de Confusão deste modelo, também explicitada na figura \ref{fig:resultadonormalizada}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/ConfusionMatrizNormalizado}
+	\caption{86\% das entradas ruins foram classificadas como ruins e 100\% das boas foram classificadas como boas}
+	\label{fig:confusionmatriznormalizado}
+\end{figure}
+
  
 \section{Mudança de configurações do modelo}
 
