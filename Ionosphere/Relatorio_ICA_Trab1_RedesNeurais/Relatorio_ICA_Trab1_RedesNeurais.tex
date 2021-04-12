@@ -38,7 +38,7 @@ Com o intuito de criar um modelo de rede neural para classificar o dataset \text
 
 \section{Compreensão do problema e análise de variáveis}
 
-\subsection{Observe a base de dados do problema. Existem variáveis que podem ser	eliminadas do dataset? Justifique.}
+\subsection{Observe a base de dados do problema. Existem variáveis que podem ser	eliminadas do dataset? Justifique.}\label{subsec:eliminadas}
 
 Ao analisar as colunas do dataset, percebe-se que as duas primeiras colunas, \textit{info\_1} e \textit{info\_2} aparentam ser colunas inteiramente de 1 e 0, respectivamente. Para ter certeza, uma vez que observar apenas o head e tail não é suficiente, as colunas inteiras foram analisadas e confirmou-se que a segunda coluna, \textit{info\_1} de fato é inteiramente de 0. Sendo assim, é recomendável que ela seja excluída do dataset pois, além de não trazer nenhuma informação útil à classificação dos retornos de rádio, essa informação pode atrapalhar o treinamento da rede, uma vez que ambos os retornos bons e ruins apresentam valor 0 neste atributo.
 
@@ -93,8 +93,35 @@ A figura abaixo indica a matriz de confusão relativa de nosso modelo. Como nós
 \end{figure}
 
 
+
+
 \subsection{Agora normalize os dados de entrada e treine novamente o modelo MLP.	Avalie os resultados obtidos e comente o efeito da normalização no	treinamento da Rede Neural.}
 	
+Realizar uma normalização dos dados de entrada é uma estratégia útil para tentar aumentar tanto a eficiência computacional quanto sua precisão de classificação. A normalização é importante, também, para adequar os valores aos domínios das funções de ativação que, neste caso, são a \textit{ReLu} (Rectified Linear Activation Unit) utilizada para as camadas escondidas e a \textit{Sigmoid} para a camada de saída.
+
+Ao normalizar as entradas, novamente foi verificada a coluna \textit{info\_0}, que permaneceu na base de dados na seção \ref{subsec:eliminadas}. Ela permanece, obviamente, inalterada, uma vez que seus valores já eram em 0 e 1. No entanto, foi modelada uma rede com e outra sem esta coluna e não foi observada grande diferença de qualidade de classificação. Sendo assim, a coluna permanece na base de dados.
+
+Além de normalizar, nenhuma outra modificação foi feita no modelo, então podemos seguir para a explanação dos resultados. As figuras a seguir exibem o output do treinamento do modelo e as métricas dos resultados de teste.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{Imagens/Fit_Normalizada}
+	\caption{Output do treinamento do modelo normalizado}
+	\label{fig:fitnormalizada}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/resultadoNormalizada}
+	\caption{Métricas do modelo normalizado}
+	\label{fig:resultadonormalizada}
+\end{figure}
+
+A acurácia do modelo normalizado é maior que a do modelo não normalizado. Obtivemos um aumento de 0.02 nesta métrica, passando de 0.92 para 0.94. Como nossa acurácia já possuía um valor alto, este aumento, por si só, pode não significar grandes melhoras gerais da qualidade da rede, então é importante analisarmos, novamente, as demais métricas. Além disso, ao analisar a evolução da acurácia na figura \ref{fig:fitnormalizada}, percebe-se que houve maiores flutuações do valor da acurácia e que foram necessárias mais épocas para ela atingir pela primeira vez um valor acima de 0.9. No entanto, como todos os pesos são inicializados aleatoriamente, este fato não é de grande importância para averiguar a qualidade da rede.
+
+Ambas as precisões das classes "ruim" e "boa" aumentaram. A precisão da classe 0 (ruim) aumentou de 0.96 para 1.0 e a classe 1 (boa) aumentou de 0.89 para 0.91. Isso quer dizer que a rede cujas entradas foram normalizadas se mostrou a rede não classificou nenhuma entrada ruim como boa e classificou apenas 0.09 entradas boas como ruins. Esse fato aumenta a confiabilidade desta rede em relação à anterior.
+
+O recall, de modo similar à precisão, também aumentou seus valores. Para a classe "ruim" o modelo apresentou uma evolução de 0.82 para 0.86 e, para a classe "boa", de 0.98 para 1. Novamente, isso quer dizer que este modelo 
+ 
 \section{Mudança de configurações do modelo}
 
 \subsection{Insira o conjunto de validação para o treinamento do modelo. Avalie o resultado obtido.}

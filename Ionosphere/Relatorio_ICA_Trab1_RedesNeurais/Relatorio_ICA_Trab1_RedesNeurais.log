@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  11 APR 2021 20:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  11 APR 2021 21:00
 entering extended mode
 **./Relatorio_ICA_Trab1_RedesNeurais.tex
 (Relatorio_ICA_Trab1_RedesNeurais.tex
@@ -375,6 +375,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5 <./Imagens/ConfusionMatrizNaoNormalizado.png>]
+<Imagens/Fit_Normalizada.png, id=31, 755.4624pt x 542.025pt>
+File: Imagens/Fit_Normalizada.png Graphic file (type png)
+<use Imagens/Fit_Normalizada.png>
+Package pdftex.def Info: Imagens/Fit_Normalizada.png  used on input line 108.
+(pdftex.def)             Requested size: 500.77129pt x 359.30075pt.
+
+Overfull \hbox (45.52718pt too wide) in paragraph at lines 108--109
+ [][] 
+ []
+
+<Imagens/resultadoNormalizada.png, id=32, 335.75438pt x 175.40532pt>
+File: Imagens/resultadoNormalizada.png Graphic file (type png)
+<use Imagens/resultadoNormalizada.png>
+Package pdftex.def Info: Imagens/resultadoNormalizada.png  used on input line 1
+14.
+(pdftex.def)             Requested size: 318.66948pt x 166.48154pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -383,19 +399,37 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6] (Relatorio_ICA_Trab1_RedesNeurais.aux)
+[6 <./Imagens/Fit_Normalizada.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[7 <./Imagens/resultadoNormalizada.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8] (Relatorio_ICA_Trab1_RedesNeurais.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4065 strings out of 479321
- 58451 string characters out of 2856584
- 384543 words of memory out of 3000000
- 21478 multiletter control sequences out of 15000+600000
+ 4086 strings out of 479321
+ 59034 string characters out of 2856584
+ 384569 words of memory out of 3000000
+ 21497 multiletter control sequences out of 15000+600000
  410088 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,74p,1174b,358s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,74p,1174b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/p
@@ -403,10 +437,10 @@ ublic/amsfonts/cm/cmr10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmr12.pfb><C:/Users/matno/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/matno/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Relatorio_ICA_Trab1_RedesNeurais.pdf (6 pages, 973762 bytes).
-
+Output written on Relatorio_ICA_Trab1_RedesNeurais.pdf (8 pages, 1864418 bytes)
+.
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
