@@ -95,7 +95,7 @@ A figura abaixo indica a matriz de confusão relativa de nosso modelo. Como nós
 
 
 
-\subsection{Agora normalize os dados de entrada e treine novamente o modelo MLP.	Avalie os resultados obtidos e comente o efeito da normalização no	treinamento da Rede Neural.}
+\subsection{Agora normalize os dados de entrada e treine novamente o modelo MLP.	Avalie os resultados obtidos e comente o efeito da normalização no	treinamento da Rede Neural.}\label{subsec:normalizada}
 	
 Realizar uma normalização dos dados de entrada é uma estratégia útil para tentar aumentar tanto a eficiência computacional quanto sua precisão de classificação. A normalização é importante, também, para adequar os valores aos domínios das funções de ativação que, neste caso, são a \textit{ReLu} (Rectified Linear Activation Unit) utilizada para as camadas escondidas e a \textit{Sigmoid} para a camada de saída.
 
@@ -136,14 +136,197 @@ Novamente, a figura a seguir exibe a Matriz de Confusão deste modelo, também e
  
 \section{Mudança de configurações do modelo}
 
+Para cada uma das seções a seguir, algum parâmetro do modelo será alterado, enquanto todos os outros serão mantidos iguais ao modelo criado na seção \ref{subsec:normalizada}, modelos cujos dados de entrada foram normalizados. O motivo de alterar apenas um parâmetro por vez é tornar mais clara a influência deste parâmetro na qualidade do modelo, uma vez que se alterássemos mais de um concomitantemente seria difícil distinguir qual mudança causou cada alteração nos resultados.
+
 \subsection{Insira o conjunto de validação para o treinamento do modelo. Avalie o resultado obtido.}
 
 \subsection{Modifique o tempo de treinamento (épocas) da Rede Neural. Escolha dois valores distintos (e.g. 1 e 1000 épocas) e avalie os resultados.}
 
+Foram escolhidos os valores de 5 e de 1000 épocas para esta comparação. Esses valores, embora quase arbitrários, possuem uma motivação de escolha. Como na seção \ref{subsec:normalizada}, com 50 épocas, o resultado da rede foi bom, vamos observar o que acontece com a qualidade do modelo quando ele é pouquíssimo treinado e quando ele é super-treinado. Podemos suspeitar que veremos um \textit{underfitting} e um \textit{overfitting} de nosso modelo. Vejamos os resultados.
+
+\subsubsection{5 épocas}
+
+As figuras abaixo ilustram o output do treinamento do modelo, as métricas analisadas e a matriz de confusão, respectivamente, do modelo com 5 épocas apenas.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/5epocas/fit5epocas}
+	\caption{Output do treinamento do modelo}
+	\label{fig:fit5epocas}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/5epocas/metricas5epocas}
+	\caption{Métricas do modelo com 5 épocas}
+	\label{fig:metricas5epocas}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/5epocas/confusao5epocas}
+	\caption{Matriz de Confusão do modelo com 5 épocas}
+	\label{fig:confusao5epocas}
+\end{figure}
+
+Analisando a figura \ref{fig:fit5epocas} podemos, rapidamente, perceber que a acurácia de nosso modelo ao longo do treinamento não passou dos 78\%. Se analisarmos esta imagem em conjunto com a figura \ref{fig:fitnormalizada} que mostrava esta mesma informação para 50 épocas, notamos que no caso anterior precisamos de mais de 5 épocas para a acurácia atingir valores decentes. 
+
+Ao analisarmos a acurácia na firuga \ref{fig:metricas5epocas} vemos que ela é muito menor do que a obtida com 50 épocas. Isso está relacionado com o que foi discutido no parágrafo anterior. Mais especificamente, podemos comentar o seguinte: nosso modelo possui 526 parâmetros treináveis e as 5 épocas não foram suficientes para treiná-los de modo a nossa rede possuir uma especialização satisfatória. Aqui percebemos um problema de underfitting pois nossa séria não foi capaz de aprender todos os padrões do conjunto de treinamento. As demais métricas devem corroborar com esta conclusão. Vejamos.
+
+A precisão deste modelo é interessante. Embora nossa acurácia tenha sido ruim, a rede possui precisão de 100\% para a classe "bad" (0), embora apenas 67\% para a classe "good" (1).
+
+O recall, de forma similar, apresenta 100\% para a classe "good" e apenas 25\% para a classe "bad".
+
+O f1-score resultante foi 40\% para a classe "bad" e 80\% para a classe "good". Analisando apenas o comportamento da precisão e do recall deste modelo em relação ao modelo de 50 épocas, poderíamos ficar em dúvida sobre o fato dele ser pior ou melhor com base nessas métricas. No entanto, o f1-score, por ser uma análise conjunta da precisão e recall, deixa claro o pior rendimento desta rede em relação à anterior, uma vez que, para ambas as classes, o valor é menor.
+
+Com isso, podemos argumentar fortemente que o modelo não foi treinado o suficiente e não convergiu para a função desejada.
+\textbf{COMENTAR SOBRE AS MÉTRICAS}
+
+\subsubsection{1000 épocas}
+
+As figuras abaixo ilustram as métricas analisadas e a matriz de confusão, respectivamente, do modelo com 1000 épocas. O output do treinamento não foi incluído por ser grande demais para este relatório, mas pode ser consultado no notebook enviado com conjunto.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/1000epocas/metricas1000epocas}
+	\caption{Métricas do modelo com 1000 épocas}
+	\label{fig:metricas1000epocas}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/1000epocas/confusao1000epocas}
+	\caption{Matriz de Confusão do modelo com 1000 épocas}
+	\label{fig:confusao1000epocas}
+\end{figure}
+
+Ao analisar o output do treinamento, que não está exibido neste relatório, percebemos pouca diferença na acurácia e na função de perda do modelo, em relação à 50 épocas. Vale comentar apenas que os valores da acurácia deste output são todos muito bons, com a grande maioria acima de 95\%. No entanto, veremos que isso não implica, necessariamente, em uma rele adequada.
+
+Ao analisar a acurácia geral deste modelo notamos uma queda, uma vez que seu valor é de 87\%. Essa diferença entre a acurácia geral e acurácia durante o treinamento pode ser sinal de uma superespecialização da rede, que praticamente "decorou" os padrões de treino e criou uma função excessivamente flexível, que perde generalização. Como temos apenas 526 pesos, estabelecer 1000 épocas parece se mostrar exagerado para o treinamento.
+
+Ao analisarmos as demais métricas exibidas na figura \ref{fig:confusao1000epocas} e comparar com as métricas da rede com 50 épocas percebemos uma piora em todos os valores, o que corrobora para a argumentação que esta rede foi treinada demais e sobre um \textit{overfitting}.
+
 \subsection{Modifique a taxa de aprendizado da Rede Neural. Escolha dois valores distintos (e.g. 0,001 e 0,1) e avalie os resultados.}
 
-\subsection{Modifique a quantidade de neurônios na camada escondida da RedecNeural. Escolha dois valores distintos (e.g. 2 e 70 neurônios) e avalie os	resultados.}
+A taxa de aprendizado de uma Rede Neural está relacionada com a a velocidade na qual a rede treina, com o problema dos mínimos locais e com possíveis oscilações no treinamento da rede. Caso a taxa seja muito pequena, nosso treinamento será mais lento e corremos maiores riscos de convergir para um mínimo local, ao invés de atingir o minimo global da função de erro do modelo. Isso, obviamente, é indesejado, pois queremos o menor erro possível para a rede modelada. Caso a taxa seja grande demais, por outro lado, corremos o risco de ficar oscilando no entorno de um mínimo da função de erro, uma vez que os "saltos" de nossa rede são grandes demais. Veremos como esses conceitos aparecem na análise da rede neural com taxas de aprendizado 0.001 e 0.4, lembrando que, originalmente, a taxa valia 0.05. 
 
+\subsubsection{Taxa de aprendizado = 0.001}
+
+As figuras abaixo ilustram o retorno do treinamento da rede, as métricas analisadas e a matriz de confusão, respectivamente, do modelo com taxa de aprendizado igual a 0.001. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{Imagens/taxa0001/fittaxa0001}
+	\caption{Treinamento da rede neural com taxa de aprendizado 0.001}
+	\label{fig:fittaxa0001}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/taxa0001/metricastaxa0001}
+	\caption{Métricas para taxa de aprendizado 0.001}
+	\label{fig:metricastaxa0001}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/taxa0001/confusaotaxa0001}
+	\caption{Matriz de Confusão para taxa de aprendizado 0.001}
+	\label{fig:confusaotaxa0001}
+\end{figure}
+
+Ao analisar a figura \ref{fig:fittaxa0001}, uma informação que se destaca é o campo \textit{loss}. Este campo é o erro que queremos minimizar com o treinamento de rede. Com isso em mente, note que os valores de \textit{loss} para esta taxa de aprendizado estão consideravelmente maiores em relação ao modelo com taxa 0.05. Naquele a perda era minimizada até 0.11, enquanto aqui ela pouca abaixa de 0.4. Esse fato é um primeiro indicador que a taxa escolhida pode ter sido pequena demais, o que revela que talvez a rede tenha convergido para um mínimo local da função de erro. A acurácia exibida nesta mesma figura também é pior que àquela apresentada com a taxa original, e a acurácia dos teste, exibida na figura \ref{fig:metricastaxa0001} é de 82\%, menor que a original.
+
+A precisão para a classe "bad" e o recall para a classe "good" apresentam os mesmos valores para a taxa de aprendizado original, ambos 1.0. Entretanto, a precisão da classe "good" e o "recall" da classe "bad" são ambos piores que os originais. Mais uma vez, utilizemos o f1-score para averiguar que a média das métricas anteriores é pior, para ambas as classes, em relação ao modelo original. Essas análise, somadas com o que foi comentado sobre a perda grande do modelo, atestam para o fato de que esta rede é menos adequada que a original. 
+\subsubsection{Taxa de aprendizado = 0.4}
+
+As figuras abaixo ilustram o retorno do treinamento da rede, as métricas analisadas e a matriz de confusão, respectivamente, do modelo com taxa de aprendizado igual a 0.4. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{Imagens/taxa04/fittaxa04}
+	\caption{Treinamento da rede neural com taxa de aprendizado 0.4}
+	\label{fig:fittaxa04}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/taxa04/metricastaxa04}
+	\caption{Métricas para taxa de aprendizado 0.4}
+	\label{fig:metricastaxa04}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/taxa04/confusaotaxa04}
+	\caption{Matriz de Confusão para taxa de aprendizado 0.4}
+	\label{fig:confusaotaxa04}
+\end{figure}
+
+Vamos, novamente, começar analisando a perda do treinamento. Note que, logo a partir da quinta época, o valor de \textit{loss} parece ficar sempre próximo a 0.64, indo de aproximadamente 0.62 até 0.67. Isso mostra, justamente, um perfil de oscilação da minimização do valor do erro da rede. Há uma diferença entre esta oscilação visível na figura \ref{fig:fittaxa04} e a convergência para um minimo local apresentada na figura \ref{fig:fittaxa0001}. Lá os valores de erro decresceram ao longo do treinamento e convergiram para um valor ruim. Aqui não há minimização, ou, pelo menos, há pouca, o que indica a oscilação já comentada. Esse fato é indicador de que a nossa taxa de aprendizagem, 0.4, é grande demais. As demais métricas, provavelmente, darão outros indícios da má qualidade do modelo.
+
+A acurácia do teste, exibida na figura \ref{fig:metricastaxa04} foia pior de todas até agora, 0.61. Além disso, a figura \ref{fig:confusaotaxa04} nos mostra que todos os dados de teste da classe 0 foram erroneamente classificados como 1 e todos os dados de teste da classe 1 foram corretamente classificados. Estes valores de precisão, recall e f1-score nos mostram que este rede não é confiável para fazer a classificação que buscamos. 
+
+\subsection{Modifique a quantidade de neurônios na camada escondida da Rede Neural. Escolha dois valores distintos (e.g. 2 e 70 neurônios) e avalie os	resultados.}
+
+O número de neurônios da camada escondida está diretamente relacionado com a quantidade de pesos que nosso modelo deverá treinar. Como cada neurônio está conectado com todas as entradas e com a saída, e cada conexão possui um peso, além dos \textit{bias} de cada neurônio, uma rede neural com muitos neurônios na camada escondida pode se tornar custosa e complexa desnecessariamente.
+
+\subsubsection{5 neurônios}
+
+As figuras abaixo ilustram o sumário da rede, o retorno do treinamento da rede, as métricas analisadas e a matriz de confusão, respectivamente, do modelo com 5 neurônios na camada escondida. A figura \ref{fig:sumario5neuronios} mostra que, neste caso, temos 176 parâmetros para treinar.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/5neuronios/sumario5neuronios}
+	\caption{Sumário do modelo com 5 neurônios na camada escondida}
+	\label{fig:sumario5neuronios}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{Imagens/5neuronios/fit5neuronios}
+	\caption{Treinamento do modelo com 5 neurônios na camada escondida}
+	\label{fig:fit5neuronios}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/5neuronios/metricas5neuronios}
+	\caption{Métricas do modelo com 5 neurônios na camada escondida}
+	\label{fig:metricas5neuronios}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/5neuronios/confusao5neuronios}
+	\caption{Matriz de Confusão do modelo com 5 neurônios na camada escondida}
+	\label{fig:confusao5neuronios}
+\end{figure}
+
+Ao analisarmos a evolução da acurácia e da perda na figura \ref{fig:fit5neuronios} não percebemos grandes diferenças em relação ao modelo original. Isso pode indicar que ambas as quantidades de neurônios são razoáveis para este problema de classificação. Analisemos as demais métricas para averiguar se este fato é verídico.
+
+A acurácia dos testes, 89\% foi menor que a apresentada pela rede original. A precisão para a classe 0 e o recall para a classe 1 foram iguais aos do modelo original, enquanto que a precisão da classe 1 e o recall da classe 0 foram um pouco menores. Com base nisso, não é de espantar que o f1-score é um pouco menor para ambas as classes. Todos esses valores estão apresentados na figura \ref{fig:metricas5neuronios}. Sendo assim, em comparação á rede com 15 neurônios, esta rede com 5 não apresentou uma perda enorme em qualidade, apesar de mostrar-se pior. Vejamos o que ocorre ao aumentar o número de neurônios da camada escondida.
+
+\subsubsection{50 neurônios}
+
+As figuras abaixo ilustram o sumário da rede, o retorno do treinamento da rede, as métricas analisadas e a matriz de confusão, respectivamente, do modelo com 50 neurônios na camada escondida. A figura \ref{fig:sumario50neuronios} mostra que, neste caso, temos 1751 parâmetros para treinar.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/50neuronios/sumario50neuronios}
+	\caption{Sumário do modelo com 50 neurônios na camada escondida}
+	\label{fig:sumario50neuronios}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{Imagens/50neuronios/fit50neuronios}
+	\caption{Treinamento do modelo com 50 neurônios na camada escondida}
+	\label{fig:fit50neuronios}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/50neuronios/metricas50neuronios}
+	\caption{Métricas do modelo com 50 neurônios na camada escondida}
+	\label{fig:metricas50neuronios}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/50neuronios/confusao50neuronios}
+	\caption{Matriz de Confusão do modelo com 50 neurônios na camada escondida}
+	\label{fig:confusao50neuronios}
+\end{figure}
+
+Curiosamente, todas as métricas são bastante similares em relação ao modelo com 5 neurônios apenas, e ainda piores que as métricas apresentadas pelo modelo original. Isso nos indica que, para este problema de classificação da base de dados Ionosphere, a quantidade de neurônios não influencia muito na qualidade da rede criada. Mais que isso, parece que a quantidade ótima de neurônios pode estar próxima da quantidade utilizada no modelo original, 15, uma vez que, tanto ao aumentar quanto ao diminuir este parâmetro, a rede piorou. Na seção testes livres modelaremos mais algumas redes para averiguar se esta hipótese se sustenta.
 
 \section{Teste Livre}\label{sec:testelivre}
 
