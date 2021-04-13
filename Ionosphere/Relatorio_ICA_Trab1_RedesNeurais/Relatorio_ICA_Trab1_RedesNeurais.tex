@@ -45,6 +45,26 @@ Ao analisar as colunas do dataset, percebe-se que as duas primeiras colunas, \te
 \subsection{Implemente técnicas de visualização de dados e seleção de variáveis para extrair características importantes sobre a base de dados. Explique	a motivação destas técnicas e o que é possível inferir dos resultadosobtidos.}
 
 
+Foi utilizado o \textit{pairplot} da biblioteca seaborn para visualizar os valores das entradas de nossa rede neural com o intuito de procurar alguma informação útil, tanto para a compreensão da base de dados, quanto para a modelagem da rede neural. Serão adicionadas apenas as imagens úteis para alguma interpretação, com o intuito de não poluir desnecessariamente este relatório.
+
+Como pode ser visto na imagem abaixo, figura \ref{fig:pairplot0a7}, os retornos classificados como bons parecem possuir alguma relação com os valores maiores ou iguais a zero nas colunas info\_2, info\_4 e info\_6. Esta informação é interessante pois, caso alguma entrada de teste possua, nestas colunas, valores maiores que zero, há uma chance maior de pertencerem à classe "good".
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{../pairplot0a7}
+	\caption{info\_0 a info\_7}
+	\label{fig:pairplot0a7}
+\end{figure}
+
+Já a figura \ref{fig:pairplot21a28} parece revelar uma relação linear entre os retornos classificados como "good" ao olharmos as colunas info\_23, info\_24, info\_26 e info\_28. Isso pode indicar que, entradas que possuam estes valores próximos à uma determinada reta possuem maior probabilidade de serem da classe "good".
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{../pairplot21a28}
+	\caption{info\_21 a info\_28}
+	\label{fig:pairplot21a28}
+\end{figure}
+
 \section{Treinamento do modelo de Rede Neural}
 
 \subsection{Com as configurações do modelo MLP previamente definidas no script, faça o treinamento da Rede Neural sem normalizar os atributos	numéricos. Comente o resultado obtido, baseado nas métricas de	avaliação disponíveis (acurácia, precision, recall, F1-Score, Matriz de	confusão, etc.)}
@@ -258,7 +278,7 @@ As figuras abaixo ilustram o retorno do treinamento da rede, as métricas analis
 
 Vamos, novamente, começar analisando a perda do treinamento. Note que, logo a partir da quinta época, o valor de \textit{loss} parece ficar sempre próximo a 0.64, indo de aproximadamente 0.62 até 0.67. Isso mostra, justamente, um perfil de oscilação da minimização do valor do erro da rede. Há uma diferença entre esta oscilação visível na figura \ref{fig:fittaxa04} e a convergência para um minimo local apresentada na figura \ref{fig:fittaxa0001}. Lá os valores de erro decresceram ao longo do treinamento e convergiram para um valor ruim. Aqui não há minimização, ou, pelo menos, há pouca, o que indica a oscilação já comentada. Esse fato é indicador de que a nossa taxa de aprendizagem, 0.4, é grande demais. As demais métricas, provavelmente, darão outros indícios da má qualidade do modelo.
 
-A acurácia do teste, exibida na figura \ref{fig:metricastaxa04} foia pior de todas até agora, 0.61. Além disso, a figura \ref{fig:confusaotaxa04} nos mostra que todos os dados de teste da classe 0 foram erroneamente classificados como 1 e todos os dados de teste da classe 1 foram corretamente classificados. Estes valores de precisão, recall e f1-score nos mostram que este rede não é confiável para fazer a classificação que buscamos. 
+A acurácia do teste, exibida na figura \ref{fig:metricastaxa04} foi a pior de todas até agora, 0.61. Além disso, a figura \ref{fig:confusaotaxa04} nos mostra que todos os dados de teste da classe 0 foram erroneamente classificados como 1 e todos os dados de teste da classe 1 foram corretamente classificados. Estes valores de precisão, recall e f1-score nos mostram que este rede não é confiável para fazer a classificação que buscamos. 
 
 \subsection{Modifique a quantidade de neurônios na camada escondida da Rede Neural. Escolha dois valores distintos (e.g. 2 e 70 neurônios) e avalie os	resultados.}
 
