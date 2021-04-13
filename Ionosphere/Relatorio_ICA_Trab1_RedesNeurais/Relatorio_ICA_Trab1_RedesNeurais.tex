@@ -65,6 +65,8 @@ Já a figura \ref{fig:pairplot21a28} parece revelar uma relação linear entre o
 	\label{fig:pairplot21a28}
 \end{figure}
 
+Por fim, todas as imagens mostram que os retornos da classe "good", em azul, apresentam algum nível de concentração ou padrão, enquanto os retornos "bad" são aqueles mais dispersos ao longo de toda a escala de valores.
+
 \section{Treinamento do modelo de Rede Neural}
 
 \subsection{Com as configurações do modelo MLP previamente definidas no script, faça o treinamento da Rede Neural sem normalizar os atributos	numéricos. Comente o resultado obtido, baseado nas métricas de	avaliação disponíveis (acurácia, precision, recall, F1-Score, Matriz de	confusão, etc.)}
@@ -102,7 +104,7 @@ A precisão de nosso modelo foi de 0.96 para os casos zero, isto é, "bad" e de 
 
 A métrica recall indica quanto a rede acertou a classificação de uma entrada da classe 0, por exemplo, em relação ao número de entradas da classe 0. É justamente o recall que nós podemos observar na matriz de confusão da figura \ref{fig:resultadonaonormalizado}. Nosso resultado indica que, em 82\% dos casos em que o retorno era ruim, nosso modelo acertou que ele era ruim e, em 98\% dos casos em que o retorno era bom, a rede  classificou corretamente que era bom. Esta métrica usada em conjunto com a precisão é útil para avaliar o quão preciso é nosso modelo em classificar corretamente as entradas em relação à classe correta da entrada. Como nossa precisão é maior para a classe "ruim" e o recall é menor para essa mesma classe, podemos ter maior confiança do que se ambas as métricas fossem maiores para uma classe específica, o que indicaria que nosso modelo não é muito bom em classificar a entrada nesta classe.
 
-Por fim, o F1-score  indica a média harmônica entre a Precisão e o Recall. \textbf{Completar, não entendi muito bem!!}
+Por fim, o F1-score  indica a média harmônica entre a Precisão e o Recall. Uma vez que já foram analisadas as métricas recall e precisão, o f1-score não fornece, a priori, nenhuma nova informação importante. No entanto, ao alterar o modelo, utilizaremos a comparação dessa métrica para identificar melhoras na qualidade dos modelos.
 
 A figura abaixo indica a matriz de confusão relativa de nosso modelo. Como nós já comentamos sobre ela e sobre a métrica Recall, aqui apenas consta um resumo de sua interpretação.
 \begin{figure}[H]
@@ -160,6 +162,37 @@ Para cada uma das seções a seguir, algum parâmetro do modelo será alterado, 
 
 \subsection{Insira o conjunto de validação para o treinamento do modelo. Avalie o resultado obtido.}
 
+Inserir o conjunto de validação para o treinamento do modelo significa separar parte dos dados de treino para a validação, de modo que esta parte separada não é utilizada durante o treinamento.
+
+Ao inserir \textit{validation\_split=0.2} em nosso modelo, obtivemos os seguintes resultados. exibidos nas figuras abaixo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\linewidth]{Imagens/validacao/fitvalidacao}
+	\caption{Retorno do treinamento com validation\_split=0.2}
+	\label{fig:fitvalidacao}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/validacao/metricasvalidacao}
+	\caption{Métricas do teste com validation\_split=0.2}
+	\label{fig:metricasvalidacao}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/validacao/confusaovalidacao}
+	\caption{Matriz de Confusão}
+	\label{fig:confusaovalidacao}
+\end{figure}
+ 
+A priori, era de se esperar que separar um conjunto de dados para validação durante o treinamento melhorasse a qualidade da classificação da rede neural. No entanto, isso não parece ter acontecido.
+
+A figura \ref{fig:metricasvalidacao} nos mostra uma acurácia de teste de 84\%, enquanto nossa rede original possuía acurácia de 94\%. Embora este resultado não seja o esperado, tentemos buscar explicação para ele.
+
+O conjunto de validação presente poderia ajudar a verificar a ocorrência de \textit{overfitting}, mas a figura \ref{fig:fitvalidacao} não dá indícios que isso ocorreu. Podemos suspeitar desse fato uma vez que os valores de \textit{loss} e \textit{val\_loss} não apresentam perfil crescente em nenhum momento. O menor valor de \textit{loss} durante o treinamento é, aproximadamente, 0.16 e, de \textit{val\_loss}, 0.335. Os valores finais dessas métricas são similares aos mínimos. Logo, não parece ter ocorrido \textit{overfitting}.
+
+Ao analisarmos a matriz de confusão da figura \ref{fig:confusaovalidacao}, bem como o recall da figura \ref{fig:metricasvalidacao}, notamos que a rede classificou corretamente todos os padrões de teste da classe 1 \textit{(good)}, mas apenas 57\% dos padrões da classe 0 \textit{(bad)}. Esta informação pode nos dar uma dica do porque desse modelo ser pior. Nossa base de dados é consideravelmente desbalanceada, com 182 padrões 1 e apenas 98 0. Sendo assim, ao retirarmos parte da base de dados do treinamento para a validação, a rede pode ter ficado com poucos padrões 0 para aprender, o que explicaria o péssimo rendimento na classificação dos padrões pertencentes a essa classe.
+
 \subsection{Modifique o tempo de treinamento (épocas) da Rede Neural. Escolha dois valores distintos (e.g. 1 e 1000 épocas) e avalie os resultados.}
 
 Foram escolhidos os valores de 5 e de 1000 épocas para esta comparação. Esses valores, embora quase arbitrários, possuem uma motivação de escolha. Como na seção \ref{subsec:normalizada}, com 50 épocas, o resultado da rede foi bom, vamos observar o que acontece com a qualidade do modelo quando ele é pouquíssimo treinado e quando ele é super-treinado. Podemos suspeitar que veremos um \textit{underfitting} e um \textit{overfitting} de nosso modelo. Vejamos os resultados.
@@ -193,12 +226,12 @@ Ao analisarmos a acurácia na firuga \ref{fig:metricas5epocas} vemos que ela é 
 
 A precisão deste modelo é interessante. Embora nossa acurácia tenha sido ruim, a rede possui precisão de 100\% para a classe "bad" (0), embora apenas 67\% para a classe "good" (1).
 
-O recall, de forma similar, apresenta 100\% para a classe "good" e apenas 25\% para a classe "bad".
+O recall, de forma similar, apresenta 100\% para a classe "good" e apenas 25\% para a classe "bad". O motivo para o recall da classe 0 ser tão ruim, pode ser o fato de haver poucos padrões classificados como "bad" para o treinamento. Isso, somado com as pouquíssimas épocas, pode ter feito este modelo não aprender a classificar corretamente padrões desta classe.
 
 O f1-score resultante foi 40\% para a classe "bad" e 80\% para a classe "good". Analisando apenas o comportamento da precisão e do recall deste modelo em relação ao modelo de 50 épocas, poderíamos ficar em dúvida sobre o fato dele ser pior ou melhor com base nessas métricas. No entanto, o f1-score, por ser uma análise conjunta da precisão e recall, deixa claro o pior rendimento desta rede em relação à anterior, uma vez que, para ambas as classes, o valor é menor.
 
 Com isso, podemos argumentar fortemente que o modelo não foi treinado o suficiente e não convergiu para a função desejada.
-\textbf{COMENTAR SOBRE AS MÉTRICAS}
+
 
 \subsubsection{1000 épocas}
 
@@ -217,11 +250,11 @@ As figuras abaixo ilustram as métricas analisadas e a matriz de confusão, resp
 	\label{fig:confusao1000epocas}
 \end{figure}
 
-Ao analisar o output do treinamento, que não está exibido neste relatório, percebemos pouca diferença na acurácia e na função de perda do modelo, em relação à 50 épocas. Vale comentar apenas que os valores da acurácia deste output são todos muito bons, com a grande maioria acima de 95\%. No entanto, veremos que isso não implica, necessariamente, em uma rele adequada.
+Ao analisar o output do treinamento, que não está exibido neste relatório, percebemos pouca diferença na acurácia e na função de perda do modelo, em relação à 50 épocas. Vale comentar apenas que os valores da acurácia deste output são todos muito bons, com a grande maioria acima de 95\%. No entanto, veremos que isso não implica, necessariamente, em uma rede adequada.
 
 Ao analisar a acurácia geral deste modelo notamos uma queda, uma vez que seu valor é de 87\%. Essa diferença entre a acurácia geral e acurácia durante o treinamento pode ser sinal de uma superespecialização da rede, que praticamente "decorou" os padrões de treino e criou uma função excessivamente flexível, que perde generalização. Como temos apenas 526 pesos, estabelecer 1000 épocas parece se mostrar exagerado para o treinamento.
 
-Ao analisarmos as demais métricas exibidas na figura \ref{fig:confusao1000epocas} e comparar com as métricas da rede com 50 épocas percebemos uma piora em todos os valores, o que corrobora para a argumentação que esta rede foi treinada demais e sobre um \textit{overfitting}.
+Ao analisarmos as demais métricas exibidas na figura \ref{fig:confusao1000epocas} e comparar com as métricas da rede com 50 épocas percebemos uma piora em todos os valores. No entanto, a evolução da métrica \textit{loss} não revela nenhum padrão crescente, permanecendo sempre abaixo de 0.1, o que corrobora para a argumentação que esta rede, embora treinada demais, não sofre um \textit{overfitting}.
 
 \subsection{Modifique a taxa de aprendizado da Rede Neural. Escolha dois valores distintos (e.g. 0,001 e 0,1) e avalie os resultados.}
 

@@ -3,20 +3,20 @@
 \contentsline {section}{\numberline {2}Compreensão do problema e análise de variáveis}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Observe a base de dados do problema. Existem variáveis que podem ser eliminadas do dataset? Justifique.}{2}{}%
 \contentsline {subsection}{\numberline {2.2}Implemente técnicas de visualização de dados e seleção de variáveis para extrair características importantes sobre a base de dados. Explique a motivação destas técnicas e o que é possível inferir dos resultadosobtidos.}{3}{}%
-\contentsline {section}{\numberline {3}Treinamento do modelo de Rede Neural}{5}{}%
-\contentsline {subsection}{\numberline {3.1}Com as configurações do modelo MLP previamente definidas no script, faça o treinamento da Rede Neural sem normalizar os atributos numéricos. Comente o resultado obtido, baseado nas métricas de avaliação disponíveis (acurácia, precision, recall, F1-Score, Matriz de confusão, etc.)}{5}{}%
-\contentsline {subsection}{\numberline {3.2}Agora normalize os dados de entrada e treine novamente o modelo MLP. Avalie os resultados obtidos e comente o efeito da normalização no treinamento da Rede Neural.}{8}{}%
-\contentsline {section}{\numberline {4}Mudança de configurações do modelo}{10}{}%
-\contentsline {subsection}{\numberline {4.1}Insira o conjunto de validação para o treinamento do modelo. Avalie o resultado obtido.}{11}{}%
-\contentsline {subsection}{\numberline {4.2}Modifique o tempo de treinamento (épocas) da Rede Neural. Escolha dois valores distintos (e.g. 1 e 1000 épocas) e avalie os resultados.}{11}{}%
-\contentsline {subsubsection}{\numberline {4.2.1}5 épocas}{11}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}1000 épocas}{13}{}%
-\contentsline {subsection}{\numberline {4.3}Modifique a taxa de aprendizado da Rede Neural. Escolha dois valores distintos (e.g. 0,001 e 0,1) e avalie os resultados.}{14}{}%
-\contentsline {subsubsection}{\numberline {4.3.1}Taxa de aprendizado = 0.001}{14}{}%
-\contentsline {subsubsection}{\numberline {4.3.2}Taxa de aprendizado = 0.4}{16}{}%
-\contentsline {subsection}{\numberline {4.4}Modifique a quantidade de neurônios na camada escondida da Rede Neural. Escolha dois valores distintos (e.g. 2 e 70 neurônios) e avalie os resultados.}{18}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}5 neurônios}{19}{}%
-\contentsline {subsubsection}{\numberline {4.4.2}50 neurônios}{21}{}%
-\contentsline {section}{\numberline {5}Teste Livre}{23}{}%
-\contentsline {subsection}{\numberline {5.1}Faça novos testes para avaliar o desempenho da Rede Neural no problema designado. Use a técnica K-Fold (com K = 10) para analisar o resultado obtido.}{23}{}%
-\contentsline {subsection}{\numberline {5.2}Faça análises e novas implementações que você julgue importante para o seu trabalho. Não esqueça de explicar a motivação da análise realizada.}{23}{}%
+\contentsline {section}{\numberline {3}Treinamento do modelo de Rede Neural}{6}{}%
+\contentsline {subsection}{\numberline {3.1}Com as configurações do modelo MLP previamente definidas no script, faça o treinamento da Rede Neural sem normalizar os atributos numéricos. Comente o resultado obtido, baseado nas métricas de avaliação disponíveis (acurácia, precision, recall, F1-Score, Matriz de confusão, etc.)}{6}{}%
+\contentsline {subsection}{\numberline {3.2}Agora normalize os dados de entrada e treine novamente o modelo MLP. Avalie os resultados obtidos e comente o efeito da normalização no treinamento da Rede Neural.}{9}{}%
+\contentsline {section}{\numberline {4}Mudança de configurações do modelo}{11}{}%
+\contentsline {subsection}{\numberline {4.1}Insira o conjunto de validação para o treinamento do modelo. Avalie o resultado obtido.}{12}{}%
+\contentsline {subsection}{\numberline {4.2}Modifique o tempo de treinamento (épocas) da Rede Neural. Escolha dois valores distintos (e.g. 1 e 1000 épocas) e avalie os resultados.}{14}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}5 épocas}{14}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}1000 épocas}{16}{}%
+\contentsline {subsection}{\numberline {4.3}Modifique a taxa de aprendizado da Rede Neural. Escolha dois valores distintos (e.g. 0,001 e 0,1) e avalie os resultados.}{17}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Taxa de aprendizado = 0.001}{17}{}%
+\contentsline {subsubsection}{\numberline {4.3.2}Taxa de aprendizado = 0.4}{19}{}%
+\contentsline {subsection}{\numberline {4.4}Modifique a quantidade de neurônios na camada escondida da Rede Neural. Escolha dois valores distintos (e.g. 2 e 70 neurônios) e avalie os resultados.}{21}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}5 neurônios}{22}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}50 neurônios}{24}{}%
+\contentsline {section}{\numberline {5}Teste Livre}{26}{}%
+\contentsline {subsection}{\numberline {5.1}Faça novos testes para avaliar o desempenho da Rede Neural no problema designado. Use a técnica K-Fold (com K = 10) para analisar o resultado obtido.}{26}{}%
+\contentsline {subsection}{\numberline {5.2}Faça análises e novas implementações que você julgue importante para o seu trabalho. Não esqueça de explicar a motivação da análise realizada.}{26}{}%
