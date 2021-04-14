@@ -20,3 +20,4 @@
 \contentsline {section}{\numberline {5}Teste Livre}{26}{}%
 \contentsline {subsection}{\numberline {5.1}Faça novos testes para avaliar o desempenho da Rede Neural no problema designado. Use a técnica K-Fold (com K = 10) para analisar o resultado obtido.}{26}{}%
 \contentsline {subsection}{\numberline {5.2}Faça análises e novas implementações que você julgue importante para o seu trabalho. Não esqueça de explicar a motivação da análise realizada.}{26}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Early Stopping}{26}{}%
