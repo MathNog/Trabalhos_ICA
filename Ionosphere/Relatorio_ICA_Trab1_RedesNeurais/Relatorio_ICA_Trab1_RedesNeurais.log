@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  13 APR 2021 22:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  14 APR 2021 21:49
 entering extended mode
 **./Relatorio_ICA_Trab1_RedesNeurais.tex
 (Relatorio_ICA_Trab1_RedesNeurais.tex
@@ -454,7 +454,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10 <./Imagens/Fit_Normalizada.png> <./Imagens/resultadoNormalizada.png>]
-<Imagens/ConfusionMatrizNormalizado.png, id=55, 295.1025pt x 252.945pt>
+<Imagens/ConfusionMatrizNormalizado.png, id=56, 295.1025pt x 252.945pt>
 File: Imagens/ConfusionMatrizNormalizado.png Graphic file (type png)
 <use Imagens/ConfusionMatrizNormalizado.png>
 Package pdftex.def Info: Imagens/ConfusionMatrizNormalizado.png  used on input 
@@ -470,7 +470,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11 <./Imagens/ConfusionMatrizNormalizado.png>]
-<Imagens/validacao/fitvalidacao.png, id=60, 1117.776pt x 542.025pt>
+<Imagens/validacao/fitvalidacao.png, id=61, 1117.776pt x 542.025pt>
 File: Imagens/validacao/fitvalidacao.png Graphic file (type png)
 <use Imagens/validacao/fitvalidacao.png>
 Package pdftex.def Info: Imagens/validacao/fitvalidacao.png  used on input line
@@ -481,13 +481,13 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 171--172
  [][] 
  []
 
-<Imagens/validacao/metricasvalidacao.png, id=61, 333.49594pt x 176.91093pt>
+<Imagens/validacao/metricasvalidacao.png, id=62, 333.49594pt x 176.91093pt>
 File: Imagens/validacao/metricasvalidacao.png Graphic file (type png)
 <use Imagens/validacao/metricasvalidacao.png>
 Package pdftex.def Info: Imagens/validacao/metricasvalidacao.png  used on input
  line 177.
 (pdftex.def)             Requested size: 318.66948pt x 169.05782pt.
-<Imagens/validacao/confusaovalidacao.png, id=62, 290.58563pt x 251.43938pt>
+<Imagens/validacao/confusaovalidacao.png, id=63, 290.58563pt x 251.43938pt>
 File: Imagens/validacao/confusaovalidacao.png Graphic file (type png)
 <use Imagens/validacao/confusaovalidacao.png>
 Package pdftex.def Info: Imagens/validacao/confusaovalidacao.png  used on input
@@ -512,19 +512,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13 <./Imagens/validacao/confusaovalidacao.png>]
-<Imagens/5epocas/fit5epocas.png, id=73, 530.73282pt x 182.93344pt>
+<Imagens/5epocas/fit5epocas.png, id=74, 530.73282pt x 182.93344pt>
 File: Imagens/5epocas/fit5epocas.png Graphic file (type png)
 <use Imagens/5epocas/fit5epocas.png>
 Package pdftex.def Info: Imagens/5epocas/fit5epocas.png  used on input line 206
 .
 (pdftex.def)             Requested size: 318.66948pt x 109.84184pt.
-<Imagens/5epocas/metricas5epocas.png, id=74, 337.26pt x 174.6525pt>
+<Imagens/5epocas/metricas5epocas.png, id=75, 337.26pt x 174.6525pt>
 File: Imagens/5epocas/metricas5epocas.png Graphic file (type png)
 <use Imagens/5epocas/metricas5epocas.png>
 Package pdftex.def Info: Imagens/5epocas/metricas5epocas.png  used on input lin
 e 212.
 (pdftex.def)             Requested size: 318.66948pt x 165.02882pt.
-<Imagens/5epocas/confusao5epocas.png, id=75, 297.36093pt x 253.69781pt>
+<Imagens/5epocas/confusao5epocas.png, id=76, 297.36093pt x 253.69781pt>
 File: Imagens/5epocas/confusao5epocas.png Graphic file (type png)
 <use Imagens/5epocas/confusao5epocas.png>
 Package pdftex.def Info: Imagens/5epocas/confusao5epocas.png  used on input lin
@@ -549,13 +549,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15 <./Imagens/5epocas/confusao5epocas.png>]
-<Imagens/1000epocas/metricas1000epocas.png, id=85, 332.74312pt x 172.39406pt>
+<Imagens/1000epocas/metricas1000epocas.png, id=86, 332.74312pt x 172.39406pt>
 File: Imagens/1000epocas/metricas1000epocas.png Graphic file (type png)
 <use Imagens/1000epocas/metricas1000epocas.png>
 Package pdftex.def Info: Imagens/1000epocas/metricas1000epocas.png  used on inp
 ut line 242.
 (pdftex.def)             Requested size: 318.66948pt x 165.11235pt.
-<Imagens/1000epocas/confusao1000epocas.png, id=86, 290.58563pt x 252.945pt>
+<Imagens/1000epocas/confusao1000epocas.png, id=87, 290.58563pt x 252.945pt>
 File: Imagens/1000epocas/confusao1000epocas.png Graphic file (type png)
 <use Imagens/1000epocas/confusao1000epocas.png>
 Package pdftex.def Info: Imagens/1000epocas/confusao1000epocas.png  used on inp
@@ -572,7 +572,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16 <./Imagens/1000epocas/metricas1000epocas.png> <./Imagens/1000epocas/confusa
 o1000epocas.png>]
-<Imagens/taxa0001/fittaxa0001.png, id=92, 783.4068pt x 542.025pt>
+<Imagens/taxa0001/fittaxa0001.png, id=93, 783.4068pt x 542.025pt>
 File: Imagens/taxa0001/fittaxa0001.png Graphic file (type png)
 <use Imagens/taxa0001/fittaxa0001.png>
 Package pdftex.def Info: Imagens/taxa0001/fittaxa0001.png  used on input line 2
@@ -583,7 +583,7 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 269--270
  [][] 
  []
 
-<Imagens/taxa0001/metricastaxa0001.png, id=93, 335.75438pt x 167.87718pt>
+<Imagens/taxa0001/metricastaxa0001.png, id=94, 335.75438pt x 167.87718pt>
 File: Imagens/taxa0001/metricastaxa0001.png Graphic file (type png)
 <use Imagens/taxa0001/metricastaxa0001.png>
 Package pdftex.def Info: Imagens/taxa0001/metricastaxa0001.png  used on input l
@@ -598,7 +598,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-<Imagens/taxa0001/confusaotaxa0001.png, id=97, 294.34969pt x 254.45062pt>
+<Imagens/taxa0001/confusaotaxa0001.png, id=98, 294.34969pt x 254.45062pt>
 File: Imagens/taxa0001/confusaotaxa0001.png Graphic file (type png)
 <use Imagens/taxa0001/confusaotaxa0001.png>
 Package pdftex.def Info: Imagens/taxa0001/confusaotaxa0001.png  used on input l
@@ -615,7 +615,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18 <./Imagens/taxa0001/fittaxa0001.png> <./Imagens/taxa0001/metricastaxa0001.p
 ng>]
-<Imagens/taxa04/fittaxa04.png, id=103, 764.6166pt x 542.025pt>
+<Imagens/taxa04/fittaxa04.png, id=104, 764.6166pt x 542.025pt>
 File: Imagens/taxa04/fittaxa04.png Graphic file (type png)
 <use Imagens/taxa04/fittaxa04.png>
 Package pdftex.def Info: Imagens/taxa04/fittaxa04.png  used on input line 295.
@@ -625,7 +625,7 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 295--296
  [][] 
  []
 
-<Imagens/taxa04/metricastaxa04.png, id=104, 318.43968pt x 167.87718pt>
+<Imagens/taxa04/metricastaxa04.png, id=105, 318.43968pt x 167.87718pt>
 File: Imagens/taxa04/metricastaxa04.png Graphic file (type png)
 <use Imagens/taxa04/metricastaxa04.png>
 Package pdftex.def Info: Imagens/taxa04/metricastaxa04.png  used on input line 
@@ -640,7 +640,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19 <./Imagens/taxa0001/confusaotaxa0001.png>]
-<Imagens/taxa04/confusaotaxa04.png, id=110, 292.84406pt x 248.42813pt>
+<Imagens/taxa04/confusaotaxa04.png, id=111, 292.84406pt x 248.42813pt>
 File: Imagens/taxa04/confusaotaxa04.png Graphic file (type png)
 <use Imagens/taxa04/confusaotaxa04.png>
 Package pdftex.def Info: Imagens/taxa04/confusaotaxa04.png  used on input line 
@@ -665,13 +665,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21 <./Imagens/taxa04/confusaotaxa04.png>]
-<Imagens/5neuronios/sumario5neuronios.png, id=120, 398.23781pt x 168.63pt>
+<Imagens/5neuronios/sumario5neuronios.png, id=121, 398.23781pt x 168.63pt>
 File: Imagens/5neuronios/sumario5neuronios.png Graphic file (type png)
 <use Imagens/5neuronios/sumario5neuronios.png>
 Package pdftex.def Info: Imagens/5neuronios/sumario5neuronios.png  used on inpu
 t line 326.
 (pdftex.def)             Requested size: 318.66948pt x 134.94276pt.
-<Imagens/5neuronios/fit5neuronios.png, id=121, 766.062pt x 542.025pt>
+<Imagens/5neuronios/fit5neuronios.png, id=122, 766.062pt x 542.025pt>
 File: Imagens/5neuronios/fit5neuronios.png Graphic file (type png)
 <use Imagens/5neuronios/fit5neuronios.png>
 Package pdftex.def Info: Imagens/5neuronios/fit5neuronios.png  used on input li
@@ -682,13 +682,13 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 332--333
  [][] 
  []
 
-<Imagens/5neuronios/metricas5neuronios.png, id=122, 328.22626pt x 164.86594pt>
+<Imagens/5neuronios/metricas5neuronios.png, id=123, 328.22626pt x 164.86594pt>
 File: Imagens/5neuronios/metricas5neuronios.png Graphic file (type png)
 <use Imagens/5neuronios/metricas5neuronios.png>
 Package pdftex.def Info: Imagens/5neuronios/metricas5neuronios.png  used on inp
 ut line 338.
 (pdftex.def)             Requested size: 318.66948pt x 160.06816pt.
-<Imagens/5neuronios/confusao5neuronios.png, id=123, 286.06876pt x 246.1697pt>
+<Imagens/5neuronios/confusao5neuronios.png, id=124, 286.06876pt x 246.1697pt>
 File: Imagens/5neuronios/confusao5neuronios.png Graphic file (type png)
 <use Imagens/5neuronios/confusao5neuronios.png>
 Package pdftex.def Info: Imagens/5neuronios/confusao5neuronios.png  used on inp
@@ -714,14 +714,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [23 <./Imagens/5neuronios/metricas5neuronios.png> <./Imagens/5neuronios/confusa
 o5neuronios.png>]
-<Imagens/50neuronios/sumario50neuronios.png, id=134, 395.97937pt x 169.38281pt>
+<Imagens/50neuronios/sumario50neuronios.png, id=135, 395.97937pt x 169.38281pt>
 
 File: Imagens/50neuronios/sumario50neuronios.png Graphic file (type png)
 <use Imagens/50neuronios/sumario50neuronios.png>
 Package pdftex.def Info: Imagens/50neuronios/sumario50neuronios.png  used on in
 put line 359.
 (pdftex.def)             Requested size: 318.66948pt x 136.31538pt.
-<Imagens/50neuronios/fit50neuronios.png, id=135, 771.8436pt x 542.025pt>
+<Imagens/50neuronios/fit50neuronios.png, id=136, 771.8436pt x 542.025pt>
 File: Imagens/50neuronios/fit50neuronios.png Graphic file (type png)
 <use Imagens/50neuronios/fit50neuronios.png>
 Package pdftex.def Info: Imagens/50neuronios/fit50neuronios.png  used on input 
@@ -732,14 +732,14 @@ Overfull \hbox (45.52718pt too wide) in paragraph at lines 365--366
  [][] 
  []
 
-<Imagens/50neuronios/metricas50neuronios.png, id=136, 319.94531pt x 173.14688pt
+<Imagens/50neuronios/metricas50neuronios.png, id=137, 319.94531pt x 173.14688pt
 >
 File: Imagens/50neuronios/metricas50neuronios.png Graphic file (type png)
 <use Imagens/50neuronios/metricas50neuronios.png>
 Package pdftex.def Info: Imagens/50neuronios/metricas50neuronios.png  used on i
 nput line 371.
 (pdftex.def)             Requested size: 318.66948pt x 172.45952pt.
-<Imagens/50neuronios/confusao50neuronios.png, id=137, 289.08pt x 243.91125pt>
+<Imagens/50neuronios/confusao50neuronios.png, id=138, 289.08pt x 243.91125pt>
 File: Imagens/50neuronios/confusao50neuronios.png Graphic file (type png)
 <use Imagens/50neuronios/confusao50neuronios.png>
 Package pdftex.def Info: Imagens/50neuronios/confusao50neuronios.png  used on i
@@ -765,11 +765,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [25 <./Imagens/50neuronios/metricas50neuronios.png> <./Imagens/50neuronios/conf
 usao50neuronios.png>]
-<Imagens/earlystopping/fitearly.png, id=149, 513.41812pt x 615.0478pt>
+<Imagens/metricasconfusao.png, id=150, 325.215pt x 171.64125pt>
+File: Imagens/metricasconfusao.png Graphic file (type png)
+<use Imagens/metricasconfusao.png>
+Package pdftex.def Info: Imagens/metricasconfusao.png  used on input line 395.
+(pdftex.def)             Requested size: 318.66948pt x 168.19939pt.
+<Imagens/kfoldconfusao.png, id=151, 298.11375pt x 257.46187pt>
+File: Imagens/kfoldconfusao.png Graphic file (type png)
+<use Imagens/kfoldconfusao.png>
+Package pdftex.def Info: Imagens/kfoldconfusao.png  used on input line 401.
+(pdftex.def)             Requested size: 318.66948pt x 275.23004pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[26 <./Imagens/metricasconfusao.png>]
+<Imagens/earlystopping/fitearly.png, id=157, 513.41812pt x 615.0478pt>
 File: Imagens/earlystopping/fitearly.png Graphic file (type png)
 <use Imagens/earlystopping/fitearly.png>
 Package pdftex.def Info: Imagens/earlystopping/fitearly.png  used on input line
- 398.
+ 421.
 (pdftex.def)             Requested size: 318.66948pt x 381.74802pt.
 
 
@@ -780,12 +800,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26]
-<Imagens/earlystopping/metricasearly.png, id=153, 338.76563pt x 165.61874pt>
+[27 <./Imagens/kfoldconfusao.png>]
+<Imagens/earlystopping/metricasearly.png, id=162, 338.76563pt x 165.61874pt>
 File: Imagens/earlystopping/metricasearly.png Graphic file (type png)
 <use Imagens/earlystopping/metricasearly.png>
 Package pdftex.def Info: Imagens/earlystopping/metricasearly.png  used on input
- line 406.
+ line 431.
 (pdftex.def)             Requested size: 318.66948pt x 155.8004pt.
 
 
@@ -796,8 +816,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27 <./Imagens/earlystopping/fitearly.png> <./Imagens/earlystopping/metricasear
-ly.png>]
+[28 <./Imagens/earlystopping/fitearly.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -806,27 +825,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28] (Relatorio_ICA_Trab1_RedesNeurais.aux) ) 
+[29 <./Imagens/earlystopping/metricasearly.png>]
+(Relatorio_ICA_Trab1_RedesNeurais.aux) ) 
 Here is how much of TeX's memory you used:
- 4343 strings out of 479321
- 67533 string characters out of 2856584
- 384869 words of memory out of 3000000
- 21718 multiletter control sequences out of 15000+600000
+ 4362 strings out of 479321
+ 68019 string characters out of 2856584
+ 385893 words of memory out of 3000000
+ 21735 multiletter control sequences out of 15000+600000
  410088 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,74p,1119b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/matno/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/matno/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/matno/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/User
-s/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-ti12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmtt12.pfb>
-Output written on Relatorio_ICA_Trab1_RedesNeurais.pdf (28 pages, 7878680 bytes
+ 68i,11n,74p,1119b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/matno/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/matno/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/matno/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ma
+tno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmti12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmtt12.pfb>
+Output written on Relatorio_ICA_Trab1_RedesNeurais.pdf (29 pages, 7913449 bytes
 ).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
+ 198 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 
