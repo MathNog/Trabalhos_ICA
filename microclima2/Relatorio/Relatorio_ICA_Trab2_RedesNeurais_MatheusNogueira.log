@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  20 APR 2021 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  21 APR 2021 12:21
 entering extended mode
 **./Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.tex
 (Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.tex
@@ -350,12 +350,12 @@ File: Imagens/onestep/treinocomparadoneuronios.png Graphic file (type png)
 Package pdftex.def Info: Imagens/onestep/treinocomparadoneuronios.png  used on 
 input line 94.
 (pdftex.def)             Requested size: 409.71692pt x 193.25912pt.
-<Imagens/onestep/comparacaoneuronios.png, id=24, 860.4948pt x 424.9476pt>
-File: Imagens/onestep/comparacaoneuronios.png Graphic file (type png)
-<use Imagens/onestep/comparacaoneuronios.png>
-Package pdftex.def Info: Imagens/onestep/comparacaoneuronios.png  used on input
+<Imagens/onestep/comparacaoneuronios.jpg, id=24, 1792.6975pt x 885.3075pt>
+File: Imagens/onestep/comparacaoneuronios.jpg Graphic file (type jpg)
+<use Imagens/onestep/comparacaoneuronios.jpg>
+Package pdftex.def Info: Imagens/onestep/comparacaoneuronios.jpg  used on input
  line 100.
-(pdftex.def)             Requested size: 409.71692pt x 202.33852pt.
+(pdftex.def)             Requested size: 409.71692pt x 202.33311pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -381,7 +381,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5 <./Imagens/onestep/treinocomparadoneuronios.png> <./Imagens/onestep/comparac
-aoneuronios.png>] (Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.bbl
+aoneuronios.jpg>] (Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -401,13 +401,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7] (Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.aux) ) 
 Here is how much of TeX's memory you used:
- 4167 strings out of 479321
- 60487 string characters out of 2856584
- 385725 words of memory out of 3000000
- 21572 multiletter control sequences out of 15000+600000
+ 4172 strings out of 479321
+ 60497 string characters out of 2856584
+ 388725 words of memory out of 3000000
+ 21576 multiletter control sequences out of 15000+600000
  409919 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,74p,851b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,74p,926b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/matno/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/
 matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -416,9 +416,9 @@ C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
 s/cm/cmr12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmti12.pfb>
 Output written on Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.pdf (7 pages
-, 1215867 bytes).
+, 1693852 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

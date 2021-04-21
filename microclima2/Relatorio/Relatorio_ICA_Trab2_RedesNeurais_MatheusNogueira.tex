@@ -97,7 +97,7 @@
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\linewidth]{Imagens/onestep/comparacaoneuronios}
+		\includegraphics[width=0.9\linewidth]{Imagens/onestep/comparacaoneuronios.jpg}
 		\caption{Comparação de testes para diferentes quantidades de neurônios}
 		\label{fig:comparacaoneuronios}
 	\end{figure}
@@ -133,6 +133,8 @@
 	\end{table}
 	
 	Ao analisar a tabela \ref{tab:binnum}, não é possível perceber grande melhora, ou piora, no desempenho da rede neural em relação ao tipo de codificação utilizado. Tentemos encontrar uma explicação para essa consistência. 
+	
+	Como visto na seção \ref{subsec:1.1}, a série em questão é bem comportada, inclusive em relação ao padrão de sazonalidade. O fato do tipo de codificação da entrada "mês" mão ter influenciado na qualidade da previsão pode ser explicado, justamente, por esse bom comportamento. Independente do tipo de codificação a Rede parece já possuir informações suficientes para fazer a previsão com uma boa qualidade. Além disso, o tipo de codificação também altera a quantidade de entradas da rede neural. No caso numérico há apenas 1 entrada para indicar o mês, enquanto no caso binário são 4 entradas. Essa diferença aumenta o número de pesos a serem treinados e aumenta a complexidade da rede, podendo gerar perda de generalização. No entanto, uma vez que as métricas obtidas não foram muito distintas, isso não ocorreu.
 	
 	\section{Previsão Multi-Step}
 	
