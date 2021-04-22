@@ -283,7 +283,7 @@
 			RMSE   & 3.528  & 3.661    & 3.665   & 7.451 \\ \hline
 			MAE    & 2.753  & 2.774    & 2.746   & 5.901 \\ \hline
 		\end{tabular}
-		\caption{Erros para diferentes funçõesde ativação}
+		\caption{Erros para diferentes funções de ativação}
 	\end{table}
 
 	\begin{figure}[H]
@@ -293,11 +293,32 @@
 		\label{fig:inkedfuncoesativacaoli}
 	\end{figure}
 	
-	
+	Percebe-se resultados similares para as 3 primeiras funções de ativação do neurônio na camada de saída, mas muito distinto, e muito pior, para a função \textit{relu}. O motivo para essa grande diferença para a função \textit{Relu} é desconhecido por mim.
 	
 	\subsection{Implemente a codificação ‘1 of N’ e use-a para modificar a representação da variável ‘mês’. Qual a mudança existente na arquitetura da Rede	Neural? Avalie o desempenho em termos das métricas RMSE e MAE.}
 	
-
+	A codificação \textit{1 of N} se refere a referenciar cada um dos 12 meses de uma forma binária distinta com 12 entradas para a rede. Isso quer dizer que, ao invés de representar os meses de forma numérica $[1 12]$ ou de forma binária $[0000 1100]$, representamos os cada mês como uma sequencia de 12 bits sendo 11 deles 0 e apenas 1 valendo 1. O mês 4, por exemplo, pode ser representado como $000000001000$.
+	
+	Embora o ideal fosse implementar essa codificação dentro da função \textit{transform\_data()}, não fui capaz de fazê-la. Sendo assim, implementei a codificação de forma braçal e exaustiva, mas o resultado foi o mesmo da solução ideal.
+	
+	Ao implementar essa codificação, estamos também aumentando o número de entradas fornecidas para a rede neural. As possíveis implicações desse fato já foram comentadas anteriormente. Além disso, como as novas colunas da tabela de entrada fornecida à rede possuem agora diversos valores similares de zeros e uns, talvez o aprendizado seja prejudicado.
+	
+	Vejamos os resultados dos erros para a codificação \textit{1 of N} para a previsão one setp e multi step:
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|l|l|l|l|}
+			\hline
+			Codificação & \multicolumn{2}{l|}{Numérica} & \multicolumn{2}{l|}{1 of N} \\ \hline
+			Forecast    & OneStep      & MultiStep      & OneStep     & MultiStep     \\ \hline
+			RMSE        & 2.584        & 3.528          & 2.487       & 3.759         \\ \hline
+			MAE         & 1.938        & 2.753          & 1.927       & 2.79          \\ \hline
+		\end{tabular}
+	\caption{Erros para codificação numérica e 1 of N comparados por tipo de previsão}
+	\end{table}
+	
+	Nota-se que, para a previsão one-step, o resultado da codificação \textit{1 of N} apresentou erros minimamente menores que a codificação numérica. Para a previsão \textit{multi-step}, por sua vez, o resultado foi um pouco pior para a \textit{1 of N} em relação à numérica. Podemos concluir que, embora o número de entradas seja bem maior, uma vez que uma coluna para mês se tornou 12 colunas, a simplicidade dos dados, um ou zero, pode ter freado o aumento de complexidade. Como os resultados foram muito próximos, não se pode afirmar categoricamente uma vantagem clara em utilizar um dos dois tipos de codificação.
+	
 	\bibliography{bibliografia} 
 	\bibliographystyle{plain}
 \end{document}
