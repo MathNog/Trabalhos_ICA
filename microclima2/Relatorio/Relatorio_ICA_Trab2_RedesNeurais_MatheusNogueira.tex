@@ -38,7 +38,7 @@
 	\section{Compreensão do Problema}
 	\subsection{Visualize, em forma de gráfico, a dinâmica temporal da série escolhida. A série é adequada para a modelagem usando Redes Neurais? Caso não seja, que técnicas podem ser aplicadas para ajustar o comportamento da série?}\label{subsec:1.1}
 	
-	A série utilizada neste trabalho, denominada \textit{microclima2} consiste em 144 temperaturas média mensais, ou seja, temos informação sobre as temperaturas dos últimos 12 anos.
+	A série utilizada neste trabalho, denominada \textit{microclima2} consiste em 144 temperaturas médias mensais, ou seja, temos informação sobre as temperaturas dos últimos 12 anos.
 	
 	Com o intuito de analisar a dinâmica temporal da série, foi gerado o gráfico da série em si e da decomposição dela, com o intuito de verificar \textit{trending} e \textit{sazonalidade}. As figuras abaixo ilustram esses resultados.
 	
@@ -67,16 +67,17 @@
 	
 	Como a série em questão possui valores de temperaturas médias mensais ao longo dos anos, é de se esperar que exista uma sazonalidade razoavelmente perceptível. Ambas as figuras \ref{fig:plotserie} e \ref{fig:decomposeserie} mostram que essa sazonalidade existe de fato. Com essas imagens em mãos e supondo que o mês 1.0 é Janeiro, podemos inferir que as temperaturas referem-se a um local do hemisfério sul, onde é verão em janeiro, uma vez que as maiores temperaturas encontram-se próximas desse mês. Essa informação (o mês da temperatura) será útil para o treinamento da série, portanto deve constar nos dados de entrada. Como a sazonalidade não oferece problemas para a modelagem com um \textit{MLP}, não precisamos fazer nenhum tipo de correção.
 	
+	Dito isso, a série é adequada para modelagem de uma rede MLP.
 	
 	\subsection{No problema escolhido, usaremos uma variável exógena que representa	o mês de previsão (i.e. no instante t+1). De que forma esta variável pode auxiliar na previsão da série temporal?}
 	
-	Como comentado na seção \ref{subsec:1.1}, a série de temperaturas apresenta sazonalidade anual, isto é, o perfil de evolução da séria se repete de ano em ano, o que é de se esperar dada a natureza da série. Desse modo, fornecer o mês do valor de entrada pode auxiliar bastante na qualidade da previsão da série, uma vez que meses como Dezembro a Fevereiro (12 a 3) geralmente apresentam temperaturas médias mais altas, enquanto meses como Maio a Setembro (5 a 9) apresentam temperaturas mais baixas. Ao fornecer essa informação para Rede Neural, ela possuirá mais informações para aprender o perfil de sazonalidade da série, aumentando sua qualidade de previsão. 
+	Como comentado na seção \ref{subsec:1.1}, a série de temperaturas apresenta sazonalidade anual, isto é, o perfil de evolução da série se repete de ano em ano, o que é de se esperar dada a natureza da série. Desse modo, fornecer o mês do valor de entrada pode auxiliar bastante na qualidade da previsão da série, uma vez que meses como Dezembro a Fevereiro (12 a 3) geralmente apresentam temperaturas médias mais altas, enquanto meses como Maio a Setembro (5 a 9) apresentam temperaturas mais baixas. Ao fornecer essa informação para Rede Neural, ela possuirá mais informações para aprender o perfil de sazonalidade da série, aumentando sua qualidade de previsão. 
 	
 	\section{Previsão One-Step}
 	
 	\subsection{Execute o script para a previsão one-step. Analise o resultado (conjunto	de treinamento e teste), usando as métricas RMSE e MAE.}\label{subsec:2.1}
 	
-	Para realizar a previsão de um passo à frente, foram testadas diversas configurações de redes neurais, variando a quantidade de neurônios na camada escondida. Os erros \textit{RMSE} e \textit{MAE} de cada uma dessas configurações estão apresentados na tabela a seguir. Vale comentar que, no arquivo \textit{jupyter notebook} enviado junto deste relatório está presente apenas o modelo final escolhido. Além disso, o script definia a métrica \textit{MSE}, então,para obter a métrica desejada, \textit{RMSE} foi calculada a raiz quadrada da \textit{MSE} fornecida.
+	Para realizar a previsão de um passo à frente, foram testadas diversas configurações de redes neurais, variando a quantidade de neurônios na camada escondida. Os erros \textit{RMSE} e \textit{MAE} de cada uma dessas configurações estão apresentados na tabela a seguir. Vale comentar que, no arquivo \textit{jupyter notebook} enviado junto deste relatório está presente apenas o modelo final escolhido. Além disso, o script definia a métrica \textit{MSE}, então, para obter a métrica desejada, \textit{RMSE} foi calculada a raiz quadrada da \textit{MSE} fornecida.
 	
 	\begin{table}[H]\label{tab:comparacaoNeuronios}
 		\centering
@@ -104,7 +105,7 @@
 
 	Com base na análise da tabela \ref{tab:comparacaoNeuronios} e das imagens \ref{fig:treinocomparadoneuronios} e \ref{fig:comparacaoneuronios}, percebe-se que para valores de 20 e 25 neurônios os erros são muito similares. Sendo assim, foi optado por eleger a rede com 20 neurônios na camada escondida por apresentar os melhores valores para as métricas analisadas e ser um modelo mais simples do que o de 25 neurônios.
 	
-	Podemos perceber perfeitamente, com as imagens acima, a importância da generalização e da especialização da rede. Note que para 5 neurônios a curva de treino e de teste é muito suave, o que indica que a rede não conseguiu aprender o suficiente por possuir poucos pesos treináveis. Ou seja, não adquiriu especialização. Por outro lado, com 30 neurônio a curva passa a ser desnecessariamente ruidosa devido à quantidade grande de parâmetros treináveis, causando perda de generalização.
+	Podemos perceber perfeitamente, com as imagens acima, a importância da generalização e da especialização da rede. Note que para 5 neurônios a curva de treino e de teste é muito suave, o que indica que a rede não conseguiu aprender o suficiente por possuir poucos pesos treináveis. Ou seja, não adquiriu especialização. Por outro lado, com 30 neurônios a curva passa a ser desnecessariamente ruidosa devido à quantidade grande de parâmetros treináveis, causando perda de generalização.
 	
 	A figura abaixo exibe as métricas da rede escolhida.
 	
@@ -134,9 +135,9 @@
 	
 	Ao analisar a tabela \ref{tab:binnum}, não é possível perceber grande melhora, ou piora, no desempenho da rede neural em relação ao tipo de codificação utilizado. Tentemos encontrar uma explicação para essa consistência. 
 	
-	Como visto na seção \ref{subsec:1.1}, a série em questão é bem comportada, inclusive em relação ao padrão de sazonalidade. O fato do tipo de codificação da entrada "mês" mão ter influenciado na qualidade da previsão pode ser explicado, justamente, por esse bom comportamento. Independente do tipo de codificação a Rede parece já possuir informações suficientes para fazer a previsão com uma boa qualidade. Além disso, o tipo de codificação também altera a quantidade de entradas da rede neural. No caso numérico há apenas 1 entrada para indicar o mês, enquanto no caso binário são 4 entradas. Essa diferença aumenta o número de pesos a serem treinados e aumenta a complexidade da rede, podendo gerar perda de generalização. No entanto, uma vez que as métricas obtidas não foram muito distintas, isso não ocorreu.
+	Como visto na seção \ref{subsec:1.1}, a série em questão é bem comportada, inclusive em relação ao padrão de sazonalidade. O fato do tipo de codificação da entrada "mês"  não ter influenciado na qualidade da previsão pode ser explicado, justamente, por esse bom comportamento. Independente do tipo de codificação a Rede parece já possuir informações suficientes para fazer a previsão com uma boa qualidade. Além disso, o tipo de codificação também altera a quantidade de entradas da rede neural. No caso numérico há apenas 1 entrada para indicar o mês, enquanto no caso binário são 4 entradas. Essa diferença aumenta o número de pesos a serem treinados e aumenta a complexidade da rede, podendo gerar perda de generalização. No entanto, uma vez que as métricas obtidas não foram muito distintas, isso não ocorreu.
 	
-	Para as demais seções, foi utilizada a codificação numérica.
+	Para as demais seções, foi utilizada a codificação numérica, uma vez que ela torna a rede mais simples.
 	
 	\section{Previsão Multi-Step}
 	
@@ -173,7 +174,7 @@
 		\caption{Erros para a previsão multi step}
 	\end{table}
 
-	Pode-se perceber que o resultado da previsão multi-step foi consideravelmente pior que o da one-step. Um motivo que pode explicar essa piora, é o fato da previsão multi-step funcionar com a previsão de valores futuros com base em dados previstos, não apenas reais. Isso faz com que ocorra uma acumulação de erros ao longo da previsão. Sendo assim, não é de se estranhar que, embora entre os meses 2 e 9 os valores previstos e reais sejam similares, como mostra a figura \ref{fig:compmulti}, a previsão para os 3 últimos meses seja ruim. Outra característica que vale ser comentada é o perfil mais suave dos valores previstos em relação aos valores reais. Nota-se, também pela figura \ref{fig:compmulti}, que os valores previstos para o treinamento nunca alcançam a temperatura máxima nem a mínima.
+	Pode-se perceber que o resultado da previsão multi-step foi consideravelmente pior que o da one-step. Um motivo que pode explicar essa piora, é o fato da previsão multi-step funcionar com a previsão de valores futuros com base em dados previstos, não apenas reais. Isso faz com que ocorra uma acumulação de erros ao longo da previsão. Sendo assim, não é de se estranhar que, embora entre os meses 2 e 9 os valores previstos e reais sejam similares, como mostra a figura \ref{fig:compmulti}, a previsão para os 3 últimos meses seja ruim. Outra característica que vale a pena ser comentada é o perfil mais suave dos valores previstos em relação aos valores reais. Nota-se, também pela figura \ref{fig:compmulti}, que os valores previstos para o treinamento nunca alcançam a temperatura máxima nem a mínima.
 	
 	Dito isso, ainda existe a possibilidade de a perda de qualidade observada ser fruto da má implementação da previsão multi-step. Embora a lógica explicada na seção \ref{subsec:multi1} esteja correta, erros de programação podem ter sido cometidos. 
 	
@@ -182,7 +183,7 @@
 	
 	\subsection{Modifique o tamanho da janela de entrada e avalie os resultados}
 	
-	Primeiramente, é necessário apontar que todas as janelas testadas são sequenciais, uma vez que a função de transformação de dados fornecida gera apenas janelas deste tipo. Ao modificar o tamanho da janela de entrada, o que estamos, de fato, fazendo, é alterando a quantidade de meses passados que a rede terá conhecimento para prever a temperatura do próximo mês. Não necessariamente fornecer mais meses para a rede influenciará positivamente a precisão. Como a série em questão é de temperaturas de um dado local, e apresenta um perfil sazonal forte, eventualmente fornecer apenas os últimos 6 meses, ou 4 meses seria o suficiente para a rede aprender o padrão de temperaturas. Uma possível melhor escolha de janela seria fornecer o último trimestre ou quadrimestre e a temperatura do mesmo mês da previsão, mas de um ano antes. No entanto, esta janela não foi testada por motivos já explicados.
+	Primeiramente, é necessário apontar que todas as janelas testadas são sequenciais, uma vez que a função de transformação de dados fornecida gera apenas janelas deste tipo. Ao modificar o tamanho da janela de entrada, o que estamos de fato fazendo é alterando a quantidade de meses passados que a rede terá conhecimento para prever a temperatura do próximo mês. Não necessariamente fornecer mais meses para a rede influenciará positivamente a precisão. Como a série em questão é de temperaturas de um dado local, e apresenta um perfil sazonal forte, eventualmente fornecer apenas os últimos 6 meses, ou 4 meses seria o suficiente para a rede aprender o padrão de temperaturas. Uma possível melhor escolha de janela seria fornecer o último trimestre ou quadrimestre e a temperatura do mesmo mês da previsão, mas de um ano antes. No entanto, esta janela não foi testada por motivos já explicados.
 	
 	Outra influência do tamanho da janela é o dilema entre especialização e generalização. Como sabemos, maior janela equivale a mais dados de entrada que, por sua vez, equivale a mais pesos treináveis, maior complexidade da rede que pode levar a uma hiper especialização e perda de generalização. O raciocínio contrário também vale, menor janela, menos entradas, menos pesos, rede mais simples e risco de falta de especialização.
 	
@@ -251,7 +252,7 @@
 	Serão alterados 2 parâmetros da topologia da rede de forma sequencial. São eles o número de neurônios na camada escondida e o tipo de função de ativação no neurônio da camada de saída. Por forma sequencial quero dizer que primeiro serão testados diferentes quantidade de neurônios e, após selecionar a melhor quantidade $n_{otima}$ serão testadas redes com outras funções de ativação mas com quantidade de neurônios igual a $n_{otima}$.
 	
 	Vejamos os resultados para a alteração do número de neurônios:
-	\begin{table}[]
+	\begin{table}[H]
 		\centering
 		\begin{tabular}{|l|l|l|l|l|l|}
 			\hline
@@ -269,7 +270,7 @@
 		\label{fig:inkednumeroneuroniosli}
 	\end{figure}
 
-	Não é surpresa o fato de a rede com 20 neurônios ter apresentado o melhor resultado com base nas métricas \textit{RMSE} e \textit{MAE}, uma vez que, na seção de codificação binária X numérica redes de diferentes quantidades de neurônios na camada escondida e, assim como agora, 20 foi o número com melhor resultado. 
+	Não é surpresa o fato de a rede com 20 neurônios ter apresentado o melhor resultado com base nas métricas \textit{RMSE} e \textit{MAE}, uma vez que, na seção de codificação \textit{binária X numérica} redes de diferentes quantidades de neurônios na camada escondida e, assim como agora, 20 foi o número com melhor resultado. 
 	
 	Ao analisar a figura \ref{fig:inkednumeroneuroniosli} não percebemos padrões de grande perda de generalização ou de falta de especialização entre as diferentes quantidades. É provável que, para verificar esses erros, deveriam ser variadas as épocas de treinamento em conjunto com a quantidade de neurônios.
 	
@@ -297,7 +298,7 @@
 	
 	\subsection{Implemente a codificação ‘1 of N’ e use-a para modificar a representação da variável ‘mês’. Qual a mudança existente na arquitetura da Rede	Neural? Avalie o desempenho em termos das métricas RMSE e MAE.}
 	
-	A codificação \textit{1 of N} se refere a referenciar cada um dos 12 meses de uma forma binária distinta com 12 entradas para a rede. Isso quer dizer que, ao invés de representar os meses de forma numérica $[1 12]$ ou de forma binária $[0000 1100]$, representamos os cada mês como uma sequencia de 12 bits sendo 11 deles 0 e apenas 1 valendo 1. O mês 4, por exemplo, pode ser representado como $000000001000$.
+	A codificação \textit{1 of N} se refere a referenciar cada um dos 12 meses de uma forma binária distinta com 12 entradas para a rede. Isso quer dizer que, ao invés de representar os meses de forma numérica $[1: 12]$ ou de forma binária $[0000: 1100]$, representamos os cada mês como uma sequencia de 12 bits sendo 11 deles 0 e apenas 1 valendo 1. O mês 4, por exemplo, pode ser representado como $000000001000$.
 	
 	Embora o ideal fosse implementar essa codificação dentro da função \textit{transform\_data()}, não fui capaz de fazê-la. Sendo assim, implementei a codificação de forma braçal e exaustiva, mas o resultado foi o mesmo da solução ideal.
 	
@@ -317,7 +318,7 @@
 	\caption{Erros para codificação numérica e 1 of N comparados por tipo de previsão}
 	\end{table}
 	
-	Nota-se que, para a previsão one-step, o resultado da codificação \textit{1 of N} apresentou erros minimamente menores que a codificação numérica. Para a previsão \textit{multi-step}, por sua vez, o resultado foi um pouco pior para a \textit{1 of N} em relação à numérica. Podemos concluir que, embora o número de entradas seja bem maior, uma vez que uma coluna para mês se tornou 12 colunas, a simplicidade dos dados, um ou zero, pode ter freado o aumento de complexidade. Como os resultados foram muito próximos, não se pode afirmar categoricamente uma vantagem clara em utilizar um dos dois tipos de codificação.
+	Nota-se que, para a previsão one-step, o resultado da codificação \textit{1 of N} apresentou erros minimamente menores que a codificação numérica. Para a previsão \textit{multi-step}, por sua vez, o resultado foi um pouco pior para a \textit{1 of N} em relação à numérica. Podemos concluir que, embora o número de entradas seja bem maior, uma vez que uma coluna para mês se tornou 12 colunas, a simplicidade dos dados, um ou zero, pode ter freado o aumento de complexidade. Como os resultados foram muito próximos, não se pode afirmar categoricamente uma vantagem clara em utilizar um dos dois tipos de codificação para a previsão desta série temporal.
 	
 	\bibliography{bibliografia} 
 	\bibliographystyle{plain}
