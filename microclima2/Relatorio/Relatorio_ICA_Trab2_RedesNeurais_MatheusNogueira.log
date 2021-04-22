@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  21 APR 2021 21:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  21 APR 2021 22:20
 entering extended mode
 **./Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.tex
 (Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.tex
@@ -402,7 +402,7 @@ File: Imagens/multistep/compMulti.jpg Graphic file (type jpg)
 <use Imagens/multistep/compMulti.jpg>
 Package pdftex.def Info: Imagens/multistep/compMulti.jpg  used on input line 16
 1.
-(pdftex.def)             Requested size: 318.66948pt x 439.81436pt.
+(pdftex.def)             Requested size: 227.62206pt x 314.14525pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -412,28 +412,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7 <./Imagens/multistep/defmultistep.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[8 <./Imagens/multistep/compMulti.jpg>]
-<Imagens/janelas/janelas6a10.jpg, id=49, 1728.4575pt x 833.1125pt>
+[7 <./Imagens/multistep/defmultistep.png> <./Imagens/multistep/compMulti.jpg>]
+<Imagens/janelas/janelas6a10.jpg, id=46, 1728.4575pt x 833.1125pt>
 File: Imagens/janelas/janelas6a10.jpg Graphic file (type jpg)
 <use Imagens/janelas/janelas6a10.jpg>
 Package pdftex.def Info: Imagens/janelas/janelas6a10.jpg  used on input line 20
 5.
 (pdftex.def)             Requested size: 409.71692pt x 197.4722pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8]
 <Imagens/janelas/janelas1a4.jpg, id=50, 1742.51pt x 837.1275pt>
 File: Imagens/janelas/janelas1a4.jpg Graphic file (type jpg)
 <use Imagens/janelas/janelas1a4.jpg>
 Package pdftex.def Info: Imagens/janelas/janelas1a4.jpg  used on input line 212
 .
 (pdftex.def)             Requested size: 409.71692pt x 196.82718pt.
+<Imagens/janelas/janelas6a10MULTI.jpg, id=51, 856.1586pt x 409.53pt>
+File: Imagens/janelas/janelas6a10MULTI.jpg Graphic file (type jpg)
+<use Imagens/janelas/janelas6a10MULTI.jpg>
+Package pdftex.def Info: Imagens/janelas/janelas6a10MULTI.jpg  used on input li
+ne 235.
+(pdftex.def)             Requested size: 409.71692pt x 195.97852pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -443,8 +450,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9 <./Imagens/janelas/janelas6a10.jpg>]
-(Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.bbl)
+[9 <./Imagens/janelas/janelas6a10.jpg> <./Imagens/janelas/janelas1a4.jpg>]
+<Imagens/janelas/janelas1a4MULTI.jpg, id=55, 857.1222pt x 411.939pt>
+File: Imagens/janelas/janelas1a4MULTI.jpg Graphic file (type jpg)
+<use Imagens/janelas/janelas1a4MULTI.jpg>
+Package pdftex.def Info: Imagens/janelas/janelas1a4MULTI.jpg  used on input lin
+e 242.
+(pdftex.def)             Requested size: 409.71692pt x 196.9176pt.
+
+(Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -453,29 +467,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10 <./Imagens/janelas/janelas1a4.jpg>]
-(Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.aux) ) 
+[10 <./Imagens/janelas/janelas6a10MULTI.jpg> <./Imagens/janelas/janelas1a4MULTI
+.jpg>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11] (Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.aux) ) 
 Here is how much of TeX's memory you used:
- 4212 strings out of 479321
- 61526 string characters out of 2856584
- 388781 words of memory out of 3000000
- 21608 multiletter control sequences out of 15000+600000
+ 4226 strings out of 479321
+ 62001 string characters out of 2856584
+ 389803 words of memory out of 3000000
+ 21620 multiletter control sequences out of 15000+600000
  410540 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,74p,989b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/matno/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/matn
-o/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/U
-sers/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.
-pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.pdf (10 page
-s, 4051762 bytes).
+ 68i,11n,74p,989b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/matno/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users
+/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.pdf (11 page
+s, 4512565 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
