@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  21 APR 2021 22:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.8)  22 APR 2021 00:36
 entering extended mode
 **./Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.tex
 (Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.tex
@@ -458,7 +458,6 @@ Package pdftex.def Info: Imagens/janelas/janelas1a4MULTI.jpg  used on input lin
 e 242.
 (pdftex.def)             Requested size: 409.71692pt x 196.9176pt.
 
-(Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -468,7 +467,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10 <./Imagens/janelas/janelas6a10MULTI.jpg> <./Imagens/janelas/janelas1a4MULTI
-.jpg>])
+.jpg>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 254.
+
+<Imagens/topologias/numeroNeuronios.png, id=59, 1397.22pt x 505.13719pt>
+File: Imagens/topologias/numeroNeuronios.png Graphic file (type png)
+<use Imagens/topologias/numeroNeuronios.png>
+Package pdftex.def Info: Imagens/topologias/numeroNeuronios.png  used on input 
+line 267.
+(pdftex.def)             Requested size: 455.24411pt x 164.58386pt.
+<Imagens/topologias/InkedfuncoesAtivacao_LI.jpg, id=60, 1776.6375pt x 855.195pt
+>
+File: Imagens/topologias/InkedfuncoesAtivacao_LI.jpg Graphic file (type jpg)
+<use Imagens/topologias/InkedfuncoesAtivacao_LI.jpg>
+Package pdftex.def Info: Imagens/topologias/InkedfuncoesAtivacao_LI.jpg  used o
+n input line 291.
+(pdftex.def)             Requested size: 409.71692pt x 197.21268pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -477,28 +493,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11] (Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.aux) ) 
+[11 <./Imagens/topologias/numeroNeuronios.png>]
+(Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.bbl)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[12 <./Imagens/topologias/InkedfuncoesAtivacao_LI.jpg>]
+(Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.aux) ) 
 Here is how much of TeX's memory you used:
- 4226 strings out of 479321
- 62001 string characters out of 2856584
- 389803 words of memory out of 3000000
- 21620 multiletter control sequences out of 15000+600000
+ 4247 strings out of 479321
+ 62794 string characters out of 2856584
+ 389823 words of memory out of 3000000
+ 21638 multiletter control sequences out of 15000+600000
  410540 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,74p,989b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/matno/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users
-/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.pdf (11 page
-s, 4512565 bytes).
+ 68i,12n,74p,989b,280s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/matno/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/matn
+o/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/U
+sers/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr10.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/Users/matno/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matno/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Relatorio_ICA_Trab2_RedesNeurais_MatheusNogueira.pdf (12 page
+s, 6222654 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

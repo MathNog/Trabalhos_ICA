@@ -248,6 +248,53 @@
 	
 	\subsection{Modifique a topologia da rede para obter um melhor desempenho. Altere seus parâmetros (e.g. número de processadores na camada escondida, tipo de função na camada de saída) e avalie o desempenho em termos das métricas RMSE e MAE.}
 	
+	Serão alterados 2 parâmetros da topologia da rede de forma sequencial. São eles o número de neurônios na camada escondida e o tipo de função de ativação no neurônio da camada de saída. Por forma sequencial quero dizer que primeiro serão testados diferentes quantidade de neurônios e, após selecionar a melhor quantidade $n_{otima}$ serão testadas redes com outras funções de ativação mas com quantidade de neurônios igual a $n_{otima}$.
+	
+	Vejamos os resultados para a alteração do número de neurônios:
+	\begin{table}[]
+		\centering
+		\begin{tabular}{|l|l|l|l|l|l|}
+			\hline
+			\#Neurônios & 20    & 40    & 30    & 10    & 5     \\ \hline
+			RMSE        & 3.528 & 3.693 & 3.762 & 4.511 & 4.046 \\ \hline
+			MAE         & 2.753 & 3.157 & 3.087 & 3.776 & 3.327 \\ \hline
+		\end{tabular}
+		\caption{Erros para diferentes quantidades de neurônios}
+	\end{table}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\linewidth]{Imagens/topologias/numeroNeuronios}
+		\caption{Conjuntos de treino e teste para diferentes quantidades de neurônios}
+		\label{fig:inkednumeroneuroniosli}
+	\end{figure}
+
+	Não é surpresa o fato de a rede com 20 neurônios ter apresentado o melhor resultado com base nas métricas \textit{RMSE} e \textit{MAE}, uma vez que, na seção de codificação binária X numérica redes de diferentes quantidades de neurônios na camada escondida e, assim como agora, 20 foi o número com melhor resultado. 
+	
+	Ao analisar a figura \ref{fig:inkednumeroneuroniosli} não percebemos padrões de grande perda de generalização ou de falta de especialização entre as diferentes quantidades. É provável que, para verificar esses erros, deveriam ser variadas as épocas de treinamento em conjunto com a quantidade de neurônios.
+	
+	Como estamos analisando apenas as métricas \textit{RMSE} e \textit{MAE}, não há nenhum outro comentário a ser feito. Passemos para a variação da função de ativação da camada de saída. Foram testadas as funções \textit{sigmoid}, \textit{relu}, \textit{softplus} e \textit{linear}, sendo esta última a que foi usada até então.
+	
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{|l|l|l|l|l|}
+			\hline
+			Função & linear & softplus & sigmoid & relu  \\ \hline
+			RMSE   & 3.528  & 3.661    & 3.665   & 7.451 \\ \hline
+			MAE    & 2.753  & 2.774    & 2.746   & 5.901 \\ \hline
+		\end{tabular}
+		\caption{Erros para diferentes funçõesde ativação}
+	\end{table}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Imagens/topologias/InkedfuncoesAtivacao_LI}
+		\caption{Treinamento e teste para diferentes funções de ativação}
+		\label{fig:inkedfuncoesativacaoli}
+	\end{figure}
+	
+	
+	
 	\subsection{Implemente a codificação ‘1 of N’ e use-a para modificar a representação da variável ‘mês’. Qual a mudança existente na arquitetura da Rede	Neural? Avalie o desempenho em termos das métricas RMSE e MAE.}
 	
 
