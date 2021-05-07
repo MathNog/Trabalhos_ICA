@@ -1,0 +1,9 @@
+\babel@toc {brazil}{}
+\contentsline {section}{\numberline {1}Reproduzindo Resultados}{1}{}%
+\contentsline {section}{\numberline {2}GAP ideal}{2}{}%
+\contentsline {section}{\numberline {3}Taxas Crossover e Mutação}{2}{}%
+\contentsline {section}{\numberline {4}Tamanho da População}{2}{}%
+\contentsline {section}{\numberline {5}Convergência}{2}{}%
+\contentsline {section}{\numberline {6}Crossover}{2}{}%
+\contentsline {section}{\numberline {7}Normalização Linear}{2}{}%
+\contentsline {section}{\numberline {8}Gerais}{3}{}%
