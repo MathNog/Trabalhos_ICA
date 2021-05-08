@@ -1,9 +1,9 @@
 \babel@toc {brazil}{}
-\contentsline {section}{\numberline {1}Reproduzindo Resultados}{1}{}%
-\contentsline {section}{\numberline {2}GAP ideal}{2}{}%
-\contentsline {section}{\numberline {3}Taxas Crossover e Mutação}{2}{}%
-\contentsline {section}{\numberline {4}Tamanho da População}{2}{}%
-\contentsline {section}{\numberline {5}Convergência}{2}{}%
-\contentsline {section}{\numberline {6}Crossover}{2}{}%
-\contentsline {section}{\numberline {7}Normalização Linear}{3}{}%
-\contentsline {section}{\numberline {8}Gerais}{3}{}%
+\contentsline {section}{\numberline {1}Reproduzindo Resultados}{1}%
+\contentsline {section}{\numberline {2}GAP ideal}{3}%
+\contentsline {section}{\numberline {3}Taxas Crossover e Mutação}{4}%
+\contentsline {section}{\numberline {4}Tamanho da População}{5}%
+\contentsline {section}{\numberline {5}Convergência}{6}%
+\contentsline {section}{\numberline {6}Crossover}{8}%
+\contentsline {section}{\numberline {7}Normalização Linear}{8}%
+\contentsline {section}{\numberline {8}Gerais}{8}%
