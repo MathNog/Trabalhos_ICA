@@ -6,4 +6,4 @@
 \contentsline {section}{\numberline {5}Convergência}{6}%
 \contentsline {section}{\numberline {6}Crossover}{8}%
 \contentsline {section}{\numberline {7}Normalização Linear}{10}%
-\contentsline {section}{\numberline {8}Gerais}{10}%
+\contentsline {section}{\numberline {8}Gerais}{11}%
