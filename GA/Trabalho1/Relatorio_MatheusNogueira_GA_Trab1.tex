@@ -32,7 +32,7 @@
 	
 	
 	\begin{abstract}
-		Este documento consiste no relatório do trabalho 1 do módulo de Algoritmos Genéticos da disciplina ENG1456 da PUC-Rio. O objetivo deste trabalho é estudar diferentes modelos de Algoritmos Genéticos para a tentativa de otimização da função $F6$ apresentada em sala. Foi utilizado o programa \textit{GADEMO} para gerar os modelos pedidos nos enunciados. Em todas as figuras do ICADEMO em que há mais de uma curva plotada, as configurações são referentes apenas à última curva. Foram consultados os materiais de aula, o livro \cite{davis1991handbook} e outros materiais devidamente referenciados.
+		Este documento consiste no relatório do trabalho 1 do módulo de Algoritmos Genéticos da disciplina ENG1456 da PUC-Rio. O objetivo deste trabalho é estudar diferentes modelos de Algoritmos Genéticos para a tentativa de otimização da função $F6$ apresentada em sala. Foi utilizado o programa \textit{ICADEMO} para gerar os modelos pedidos nos enunciados. Em todas as figuras do ICADEMO em que há mais de uma curva plotada, as configurações são referentes apenas à última curva. Foram consultados os materiais de aula, o livro \cite{davis1991handbook} e outros materiais devidamente referenciados.
 	\end{abstract}
 	
 \section{Reproduzindo Resultados}
@@ -212,10 +212,33 @@ Para o GA 2-2, com elitismo e normalização linear, a conclusão é outra. Com 
 \textbf{Enunciado:}
 Compare o efeito dos 3 tipos de crossover disponíveis na ferramenta, executando o GA2-1 (s/ elitismo) e o GA2-2 (c/elitismo) com apenas 2500 indivíduos (20 rodadas) para cada tipo de crossover, usando taxa de crossover 80\%. Imprima as curvas em dois um gráficos separados , um para o GA2-1 e outro para o GA2-2, e tire conclusões a respeito da característica conservadora/destrutiva de cada crossover.
 
+As figuras abaixo exibem os gráficos para os 3 tipos de crossover para os GA's 2-1 e 2-2.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/questao6_1}
+	\caption{GA 2-1; Norm Linear (0) = crossover de um ponto ; Norm Linear (1) = crossover de dois pontos ; Norm Linear (2) = crossover uniforme}
+	\label{fig:questao61}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/questao6_2}
+	\caption{GA 2-2; Elitismo (0) = crossover de um ponto ; Elitismo (1) = crossover de dois pontos ; Elitismo (2) = crossover uniforme}
+	\label{fig:questao62}
+\end{figure}
+
 
 \section{Normalização Linear}
 \textbf{Enunciado:}
 Repita o GA2-3COM gap = 75 para vários valores de máximo. Verifique o que acontece quando o valor de máximo aumenta e diminui (avalie para os valores 10, 50, 100, 200, 300). Imprima as curvas em apenas um gráfico e tire breves conclusões .
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/questao7}
+	\caption{Steady State (0) = max 10; Steady State (1) = max 50; Steady State (2) = max 100; Steady State (3) = max 200; Steady State (4) = max 300;}
+	\label{fig:questao7}
+\end{figure}
+
 
 \section{Gerais}
 \textbf{Enunciado:}
