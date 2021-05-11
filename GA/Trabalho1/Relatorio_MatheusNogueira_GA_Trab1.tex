@@ -32,7 +32,7 @@
 	
 	
 	\begin{abstract}
-		Este documento consiste no relatório do trabalho 1 do módulo de Algoritmos Genéticos da disciplina ENG1456 da PUC-Rio. O objetivo deste trabalho é estudar diferentes modelos de Algoritmos Genéticos para a tentativa de otimização da função $F6$ apresentada em sala. Foi utilizado o programa \textit{ICADEMO} para gerar os modelos pedidos nos enunciados. Em todas as figuras do ICADEMO em que há mais de uma curva plotada, as configurações são referentes apenas à última curva. Foram consultados os materiais de aula, o livro \cite{davis1991handbook} e outros materiais devidamente referenciados.
+		Este documento consiste no relatório do trabalho 1 do módulo de Algoritmos Genéticos da disciplina ENG1456 da PUC-Rio. O objetivo deste trabalho é estudar diferentes modelos de Algoritmos Genéticos para a tentativa de otimização da função $F6$ apresentada em sala. Foi utilizado o programa \textit{GADEMO} para gerar os modelos pedidos nos enunciados. Em todas as figuras do GADEMO em que há mais de uma curva plotada, as configurações são referentes apenas à última curva. Foram consultados os materiais de aula, o livro \cite{davis1991handbook} e outros materiais devidamente referenciados.
 	\end{abstract}
 	
 \section{Reproduzindo Resultados}
@@ -64,13 +64,13 @@ As duas imagens abaixo exibem os 5 GA's solicitados no enunciado. Em ambas as fi
 	\label{fig:questao12}
 \end{figure}
 
-Podemos, facilmente, perceber alguns detalhes imporantes. Primeiramente, o GA 1-1 da figura\ref{fig:questao11} se mostrou pior que a busca aleatória. Isso não é surpresa,  uma vez que esse modelo não usufrui de nenhum operador além do crossover e mutação. AO analisar as demais curvas que utilizam esses recursos, é de se esperar que o resultado seja melhor que uma busca aleatória, senão não haveria motivo para utilizar um algoritmo genético.
+Podemos, facilmente, perceber alguns detalhes imporantes. Primeiramente, o GA 1-1 da figura \ref{fig:questao11} se mostrou pior que a busca aleatória. Isso não é surpresa,  uma vez que esse modelo não usufrui de nenhum operador além do crossover e mutação. Ao analisar as demais curvas que utilizam esses recursos, é de se esperar que o resultado seja melhor que uma busca aleatória, senão não haveria motivo para utilizar um algoritmo genético.
 
 Uma simples normalização linear já foi suficiente para que o GA 2-1 apresentasse melhor resultado que a busca aleatória.
 
 A utilização do elitismo é importante por garantir que, durante a evolução, o melhor indivíduo de $t+1$ seja sempre melhor ou igual ao melhor de $t$. Isso se percebe pelo fato da curva cinza da figura \ref{fig:questao11} ser monotônica, isto é, sempre crescente. Esse fato é suficiente para explicar o melhor desempenho desse modelo em relação aos anteriores.
 
-Ambos os Steady States foram utilizados com GAP=80\%, o que quer dizer que \textbf{COMPLETAR COM INTERPRETAÇÃO DO GAP E COM DIFERENÇA DE COM E SEM DUPLICADOS}
+Ambos os Steady States foram utilizados com GAP=80\%, o que quer dizer que 80\% dos indivíduos de uma geração serão trocados para a próxima geração e os melhores 20\% serão mantidos. A análise do GAP ideal será realizada na seção seguinte. A opção sem duplicados quer dizer que, a cada geração, será verificado se algum filho gerado é igual a algum indivíduo da parte que foi mantida e, se for, um novo filho será gerado. Isso, em teoria, aumenta a diversidade da população.
 
 Comparando as duas figuras, podemos perceber que, dentre os 5 GA's apresentados e a busca aleatória, aquele que utiliza elitismo junto com normalização linear (GA2-2) apresenta o melhor resultado.
 
@@ -85,15 +85,15 @@ O melhor resultado para cada GAP é exibido nas tabelas as seguir.
 		\hline
 		GAP & 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 \\
 		\hline
-		Num de 9's &  &  &  &  &  &  &  &  \\
+		Num de 9's &2.6  &2.1  &2.5  &2.5  &3.4  &2.3  &2.45  &2.5  \\
 		\hline
 		GAP & 45 & 50 & 55 & 60 & 65 & 70 & 75 & 80 \\
 		\hline
-		Num de 9's &  &  &  &  &  &  &  &  \\
+		Num de 9's &2.25  &2.2  &3.7  &3.5  &1.95  &2.0  &2.6  &3.05  \\
 		\hline
 		GAP & 85 & 90 & 95 & 100 &  &  &  &  \\
 		\hline
-		Num de 9's &  &  &  &  &  &  &  &  \\
+		Num de 9's &2.6  &2.9  &2.85  &1.75  &  &  &  &  \\
 		\hline
 	\end{tabular}
 	\caption{Tabela com melhor resultado para cada GAP Steady State com duplicados}
@@ -105,23 +105,33 @@ O melhor resultado para cada GAP é exibido nas tabelas as seguir.
 		\hline
 		GAP & 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 \\
 		\hline
-		Num de 9's &  &  &  &  &  &  &  &  \\
+		Num de 9's &3.0  &2.2  &3.15  &2.85  &3.45  &3.7  &3.45  &3.15  \\
 		\hline
 		GAP & 45 & 50 & 55 & 60 & 65 & 70 & 75 & 80 \\
 		\hline
-		Num de 9's &  &  &  &  &  &  &  &  \\
+		Num de 9's &1.9  &2.3  &2.0  &2.4  &2.1 &3.0  &3.55  &4.35  \\
 		\hline
 		GAP & 85 & 90 & 95 & 100 &  &  &  &  \\
 		\hline
-		Num de 9's &  &  &  &  &  &  &  &  \\
+		Num de 9's &3.9  &2.6  &1.9  &1.6  &  &  &  &  \\
 		\hline
 	\end{tabular}
 	\caption{Tabela com melhor resultado para cada GAP Steady State sem duplicados}
 \end{table}
 
-Como explicado na seção anterior, GAP significa a porcentagem da população que será trocada. Logo, um GAP de 0\% significaria que nenhuma parcela da população seria trocada, ou seja, não haveria Steady State. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/comparacaoGAP}
+	\caption{Linha preta = Com Duplicados; Linha vermelha = Sem Duplicados}
+	\label{fig:comparacaogap}
+\end{figure}
 
-\textbf{COMPLETAR INTERPRETAÇÃO}
+
+Como explicado na seção anterior, GAP significa a porcentagem da população que será trocada. Logo, um GAP de 0\% significaria que nenhuma parcela da população seria trocada, ou seja, a evolução ficaria congelada. Por outro lado, um GAP de 100\% seria equivalente a não haver Steady State. Sendo assim é necessário um equilíbrio entre o número de indivíduos mantidos e trocados. Se mantivermos indivíduos demais, a evolução pode se tornar lenta e estagnada, pois haverá pouca geração de novos indivíduos. Caso contrário, vamos regredir ao modelo sem Steady State, pois nenhum indivíduo será mantido e teremos a geração normal de filhos.
+
+Como imaginado, os melhores resultados não são os valores limites do GAP, como visto na \ref{fig:comparacaogap}. No entanto, percebe-se uma evolução distinta entre os casos com e sem duplicados. Para o primeiro, os melhores valores foram próximos de 80\%, enquanto para o caso sem duplicado, próximo de 55\%. Podemos notar que, para GAP de 100\%, ambos os modelos apresentam melhor valor próximo do melhor valor do modelo apenas com normalização linear, o que também era esperado.
+
+Conclusões acerca da evolução da qualidade com o aumento do GAP e do perfil de cada curva da figura \ref{fig:comparacaogap} mais aprofundadas eu sou incapaz de realizar.
 	
 \section{Taxas Crossover e Mutação}
 \textbf{Enunciado:}
@@ -214,7 +224,9 @@ Compare o efeito dos 3 tipos de crossover disponíveis na ferramenta, executando
 
 As figuras abaixo exibem os gráficos para os 3 tipos de crossover para os GA's 2-1 e 2-2.
 
-\textbf{COMENTAR SOBRE CROSSOVER!!!}
+A grande diferença e, possivelmente, vantagem, dos crossovers de 2 pontos e uniforme é a maior capacidade de combinação entre os padrões dos genitores. Essa característica, por sua vez, aumenta a diversidade dos filhos gerados, uma vez que mais padrões podem ser construídos. No caso do GA com elitismo, figura \ref{fig:questao62}, pouca diferença é notada na evolução do algoritmo com os diferentes tipos de cruzamento. No entanto, os últimos indivíduos revelam um salto de qualidade para o crossover uniforme que não é percebido nos demais. É possível que esse bom desenvolvimento final possua relação com o tipo de crossover, mas a relação não é auto evidente.
+
+Para o GA sem elitismo, mas apenas com normalização linear, o crossover uniforme foi, claramente, o pior operador entre os três. Isso se deve ao fato dele aumentar a recombinação de genes dos genitores o que, de certo modo, aumenta a aleatoriedade do processo de evolução que, sem o elitismo para garantir uma curva sempre crescente, mostra-se prejudicial para a evolução do problema. Os outros dois crossovers, de 1 e 2 pontos, fornecem resultados muito similares, mas com uma diferença, a opção de 2 pontos apresenta curva de evolução quase sempre crescente. Para averiguar se isso é devido ao crossover ou não, deveríamos treinar mais GA com essas características. Faremos isso na última seção.
 
 \begin{figure}[H]
 	\centering
@@ -253,7 +265,33 @@ Pela análise da figura, percebemos algo similar ao previsto. Os valores 10 e 30
 
 \section{Gerais}
 \textbf{Enunciado:}
-Fazendo variações nos parâmetros e técnicas disponíveis no GADEMO, estude livremente o efeito de cada umdestes no desempenho de algoritmos genéticos. Destaque e explique uma importante constatação.
+Fazendo variações nos parâmetros e técnicas disponíveis no GADEMO, estude livremente o efeito de cada umdestes no desempenho de algoritmos genéticos. Destaque e explique uma importante constatação.\\
+
+
+\textbf{Novos testes com crossover de 2 pontos e GA 2-1}
+O intuito desses testes é verificar se o comportamento quase monotônico da curva de avaliações apresentada para o GA 2-1 com crossover de 2 pontos é coincidência ou fruto dos parâmetros do algoritmo. A figura abaixo exibe os resultados.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/questao8_2pontos}
+	\caption{GA 2-1 com crossover de 2 pontos}
+	\label{fig:questao82pontos}
+\end{figure}
+
+Dada a figura \ref{fig:questao82pontos}, podemos perceber que o perfil monotônico anterior foi apenas fruto do acaso e uma especificidade daquele processo de evolução. Para outros 6 algoritmos com mesmos parâmetros, esse comportamento não foi observado.\\
+
+\textbf{GAP = 1\%}
+
+Anteriormente comentei que GAP's muito pequenos tornariam a evolução do algoritmo lenta e estagnada. Para verificar se isso, de fato, ocorre, foram gerados 6 GA's 2-3 com GAP=1\%, o menor valor possível no GADEMO. A imagem abaixo exibe os resultados.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/questao8_GAPpequeno}
+	\caption{GA 2-3 com GAP=1\%}
+	\label{fig:questao8GAPpequeno}
+\end{figure}
+
+Podemos notar que a suposição anterior não se mantém frente a esses resultados. Embora a evolução seja mais irregular, pois vemos vários degraus nas curvas da figura \ref{fig:questao8GAPpequeno}, ela é, obviamente, não constante e, na verdade, quase sempre crescente. A presença dos degraus pode ser explicada da seguinte maneira: com um GAP pequeno, muitos indivíduos são mantidos e apenas alguns novos são gerados. Com isso, as curvas apresentarão maiores porções horizontais, uma vez que de uma geração para outra pouca coisa será alterada.
 
 	\bibliography{bibliografia} 
 	\bibliographystyle{plain}
