@@ -32,7 +32,7 @@
 	
 	
 	\begin{abstract}
-		Este documento consiste no relatório do trabalho 1 do módulo de Algoritmos Genéticos da disciplina ENG1456 da PUC-Rio. O objetivo deste trabalho é estudar diferentes modelos de Algoritmos Genéticos para a tentativa de otimização da função $F6$ apresentada em sala. Foi utilizado o programa \textit{GADEMO} para gerar os modelos pedidos nos enunciados. Em todas as figuras do GADEMO em que há mais de uma curva plotada, as configurações são referentes apenas à última curva. Foram consultados os materiais de aula, o livro \cite{davis1991handbook} e outros materiais devidamente referenciados.
+		Este documento consiste no relatório do trabalho 1 do módulo de Algoritmos Genéticos da disciplina ENG1456 da PUC-Rio. O objetivo deste trabalho é estudar diferentes modelos de Algoritmos Genéticos para a tentativa de otimização da função $F6$ apresentada em sala. Foi utilizado o programa \textit{GADEMO} para gerar os modelos pedidos nos enunciados. Em todas as figuras do GADEMO em que há mais de uma curva plotada, as configurações são referentes apenas à última curva. Foram consultados os materiais de aula, o livro \cite{davis1991handbook} e outros materiais devidamente referenciados. Todas as seções começam com o enunciado retirado arquivo do trabalho.
 	\end{abstract}
 	
 \section{Reproduzindo Resultados}
@@ -70,9 +70,9 @@ Uma simples normalização linear já foi suficiente para que o GA 2-1 apresenta
 
 A utilização do elitismo é importante por garantir que, durante a evolução, o melhor indivíduo de $t+1$ seja sempre melhor ou igual ao melhor de $t$. Isso se percebe pelo fato da curva cinza da figura \ref{fig:questao11} ser monotônica, isto é, sempre crescente. Esse fato é suficiente para explicar o melhor desempenho desse modelo em relação aos anteriores.
 
-Ambos os Steady States foram utilizados com GAP=80\%, o que quer dizer que 80\% dos indivíduos de uma geração serão trocados para a próxima geração e os melhores 20\% serão mantidos. A análise do GAP ideal será realizada na seção seguinte. A opção sem duplicados quer dizer que, a cada geração, será verificado se algum filho gerado é igual a algum indivíduo da parte que foi mantida e, se for, um novo filho será gerado. Isso, em teoria, aumenta a diversidade da população.
+Ambos os Steady States foram utilizados com GAP=80\%, o que quer dizer que 80\% dos indivíduos de uma geração serão trocados para a próxima geração e os melhores 20\% serão mantidos. A análise do GAP ideal será realizada na seção seguinte. A opção sem duplicados quer dizer que, a cada geração, será verificado se algum filho gerado é igual a algum indivíduo da parte que foi mantida e, se for, um novo filho será gerado. Isso, em teoria, aumenta a diversidade da população. Para os testes executados e expressos na figura \ref{fig:questao12}, nota-se que essas opções geraram resultados muito similares.
 
-Comparando as duas figuras, podemos perceber que, dentre os 5 GA's apresentados e a busca aleatória, aquele que utiliza elitismo junto com normalização linear (GA2-2) apresenta o melhor resultado.
+Comparando as duas figuras, podemos perceber que, dentre os 5 GA's apresentados e a busca aleatória, aquele que utiliza elitismo junto com normalização linear (GA2-2) apresenta o melhor resultado, seguidos daqueles que implementam o Steady State.
 
 \section{GAP ideal}
 \textbf{Enunciado:} Para os GAs que utilizam steady-state, determine o GAP (número de indivíduos substituídos a cada ciclo) ideal. Para isso, use um incremento de 5 indivíduos a cada tentativa, começando com um GAP=5. Não entregue os gráficos referentes aos testes de GAP.\\
@@ -129,9 +129,9 @@ O melhor resultado para cada GAP é exibido nas tabelas as seguir.
 
 Como explicado na seção anterior, GAP significa a porcentagem da população que será trocada. Logo, um GAP de 0\% significaria que nenhuma parcela da população seria trocada, ou seja, a evolução ficaria congelada. Por outro lado, um GAP de 100\% seria equivalente a não haver Steady State. Sendo assim é necessário um equilíbrio entre o número de indivíduos mantidos e trocados. Se mantivermos indivíduos demais, a evolução pode se tornar lenta e estagnada, pois haverá pouca geração de novos indivíduos. Caso contrário, vamos regredir ao modelo sem Steady State, pois nenhum indivíduo será mantido e teremos a geração normal de filhos.
 
-Como imaginado, os melhores resultados não são os valores limites do GAP, como visto na \ref{fig:comparacaogap}. No entanto, percebe-se uma evolução distinta entre os casos com e sem duplicados. Para o primeiro, os melhores valores foram próximos de 80\%, enquanto para o caso sem duplicado, próximo de 55\%. Podemos notar que, para GAP de 100\%, ambos os modelos apresentam melhor valor próximo do melhor valor do modelo apenas com normalização linear, o que também era esperado.
+Como imaginado, os melhores resultados não são os valores limites do GAP, como visto na figura \ref{fig:comparacaogap}. No entanto, percebe-se uma evolução distinta entre os casos com e sem duplicados. Para o primeiro, os melhores valores foram próximos de 80\%, enquanto que, para o caso sem duplicado, próximo de 55\%. Podemos notar que, para GAP de 100\%, ambos os modelos apresentam melhor valor próximo do melhor valor do modelo apenas com normalização linear, o que também era esperado.
 
-Conclusões acerca da evolução da qualidade com o aumento do GAP e do perfil de cada curva da figura \ref{fig:comparacaogap} mais aprofundadas eu sou incapaz de realizar.
+Conclusões acerca da evolução da qualidade com o aumento do GAP e do perfil de cada curva da figura \ref{fig:comparacaogap} mais aprofundadas são difíceis de serem realizadas com base apenas nesses dados.
 	
 \section{Taxas Crossover e Mutação}
 \textbf{Enunciado:}
@@ -142,7 +142,7 @@ A figura \ref{fig:questao3} abaixo exibe o GA com as taxas pedidas.
 
 Sabemos que a altas taxas de mutação aumentam a aleatoriedade do processo de evolução e que baixas taxas de crossover tornam a busca pela seleção ótima mais lenta, uma vez que há menor combinação dos progenitores.
 
-Ao analisar a figura \ref{fig:questao3} podemos perceber uma alta volatilidade na qualidade da solução, isto é, grnade variação entre picos e vales. Esse fato é resultado da alta taxa de mutação, uma vez que ela atrapalha a evolução normal do algoritmo ao adicionar aleatoriedade. A baixa taxa de mutação, por sua vez, é percebida de forma mais sutil pela falta de caráter crescente da curva. Como são feitos poucos cruzamentos, utiliza-se pouco os bons progenitores para gerar bons filhos, o que diminui a qulidade da evolução da solução. 
+Ao analisar a figura \ref{fig:questao3} podemos perceber uma alta volatilidade na qualidade da solução, isto é, grande variação entre picos e vales. Esse fato é resultado da alta taxa de mutação, uma vez que ela atrapalha a evolução normal do algoritmo ao adicionar aleatoriedade. A baixa taxa de crossover, por sua vez, é percebida de forma mais sutil pela falta de caráter crescente da curva. Como são feitos poucos cruzamentos, utiliza-se pouco os bons progenitores para gerar bons filhos, o que diminui a qualidade da evolução da solução. 
 
 \begin{figure}[H]
 	\centering
@@ -157,7 +157,7 @@ Ao analisar a figura \ref{fig:questao3} podemos perceber uma alta volatilidade n
 Analise o efeito do tamanho da população, obtendo as curvas de desempenho do GA2-2 (20 rodadas) para vários tamanhos de população (ex: 20, 50, 100, 150) e sempre com o mesmo número de gerações (total de indivíduos variável). Imprima as curvas para e tire conclusões sobre o efeito do tamanho da população no desempenho do
 algoritmo genético.\\
 
-Antes de partirmos para a avaliação dos diferentes GA's, devemos lembrar como definir o tamanho da população em relação do número de gerações e do número total de indivíduos(avaliações).
+Antes de partirmos para a avaliação dos diferentes GA's, devemos lembrar como definir o tamanho da população em relação do número de gerações e do número total de indivíduos (avaliações).
 
 Esses parâmetros relacionam-se de acordo com a seguinte expressão:
 
@@ -187,14 +187,14 @@ A figura abaixo exibe os resultados para esses valores de população.
 	\label{fig:questao4}
 \end{figure}
 
-Podemos, a partir da análise da imagem, concluir que uma população de 20 indivíduos com 40 gerações é pouco para a evolução do algoritmo. O que nos indicar esse fato é a curva amarela da figura \ref{fig:questao4}, que representa a população de 50, ser praticamente a mesma da curva azul, população de 20, até o número de avaliações existentes na curva azul. Isso nos indica que, se houver mais do que 20 indivíduos por população, o algoritmo seria capaz de evoluir mais em direção à solução ótima. 
+Podemos, a partir da análise da imagem, concluir que uma população de 20 indivíduos com 40 gerações é pouco para a evolução do algoritmo. O que nos indica esse fato é a curva amarela da figura \ref{fig:questao4}, que representa a população de 50, ser praticamente a mesma da curva azul, população de 20, até o número de avaliações existentes na curva azul. Isso nos indica que, se houver mais do que 20 indivíduos por população, o algoritmo seria capaz de evoluir mais em direção à solução ótima. 
 
 Por outro lado, para as populações de 50, 100 e 150, o resultado final da soluçao é muito similar, ficando em torno de 2.1 noves. Isso nos revela que aumentar o número de indivíduos da população mantendo a mesma quantidade de gerações não infere, necessariamente, na melhora da solução. Podemos justificar isso da seguinte maneira: mais indivíduos por população aumenta o paralelismo da busca, mas, em dado momento, o algoritmo já possui indivíduos suficientes buscando a solução ótima e precisaria, apenas, de mais tempo (gerações) para encontrá-la. 
 
 \section{Convergência}
 \textbf{Enunciado:}
 Repita o GA2-1 e o GA2-2 (20 rodadas cada) modificando apenas o total de indivíduos criados para o 10000. Imprima as curvas em dois um gráficos separados, um para o GA2-1 e outro para o GA2-2, e verifique se é vantajoso todo esse esforço computacional, em outras palavras, determine o número de
-indivíduos para o qual cada algoritmo converge.
+indivíduos para o qual cada algoritmo converge.\\
 
 A figura abaixo exibe os resultados dos GA's solicitados no enunciado.
 
@@ -214,19 +214,19 @@ A figura abaixo exibe os resultados dos GA's solicitados no enunciado.
 
 A análise de convergência dos GA's fornece conclusões distintas para o caso com e sem elitismo. Comecemos pelo GA 2-1, com normalização linear e sem elitismo.
 
-Nesse caso, percebe-se pela figura \ref{fig:questao51} que não há uma convergência para o mesmo valor de avaliação, isto é, o algoritmo com mais avaliações (curva amarela) apresentou um desempenho melhor que o com menos (curva azul). Isso pode ser explicado pelo fato de, em elitismo, não garantirmos que a curva de avaliação será sempre crescente. Sendo assim, precisamos de mais tempo, ou seja, mais avaliações e gerações, para chegar a um resultado mais próximo do ótimo, o que é evidenciado pela diferença entre as curvas.
+Nesse caso, percebe-se pela figura \ref{fig:questao51} que não há uma convergência para o mesmo valor de avaliação, isto é, o algoritmo com mais avaliações (curva amarela) apresentou um desempenho melhor que o com menos (curva azul). Isso pode ser explicado pelo fato de, sem elitismo, não garantirmos que a curva de avaliação será sempre crescente. Sendo assim, precisamos de mais tempo, ou seja, mais avaliações e gerações, para chegar a um resultado mais próximo do ótimo, o que é evidenciado pela diferença entre as curvas.
 
 Para o GA 2-2, com elitismo e normalização linear, a conclusão é outra. Com a utilização do elitismo, percebemos convergência para o mesmo valor de número de noves. Note que a curva amarela, após alcançar o valor mais alto da curva azul (2.6), permanece praticamente constante. Com esse operador, geramos uma curva monotônica e convergimos para um valor bom mais rapidamente. Isso nos mostra que aumentar a população de um GA com elitsmo não gera melhores resultados, uma vez que esse operador já é suficiente para produzir uma solução boa. Aumentar o esforço computacional, nesse caso, é desncessário e, dito isso, não recomendável.
 
 \section{Crossover}
 \textbf{Enunciado:}
-Compare o efeito dos 3 tipos de crossover disponíveis na ferramenta, executando o GA2-1 (s/ elitismo) e o GA2-2 (c/elitismo) com apenas 2500 indivíduos (20 rodadas) para cada tipo de crossover, usando taxa de crossover 80\%. Imprima as curvas em dois um gráficos separados , um para o GA2-1 e outro para o GA2-2, e tire conclusões a respeito da característica conservadora/destrutiva de cada crossover.
+Compare o efeito dos 3 tipos de crossover disponíveis na ferramenta, executando o GA2-1 (s/ elitismo) e o GA2-2 (c/elitismo) com apenas 2500 indivíduos (20 rodadas) para cada tipo de crossover, usando taxa de crossover 80\%. Imprima as curvas em dois um gráficos separados , um para o GA2-1 e outro para o GA2-2, e tire conclusões a respeito da característica conservadora/destrutiva de cada crossover.\\
 
 As figuras abaixo exibem os gráficos para os 3 tipos de crossover para os GA's 2-1 e 2-2.
 
 A grande diferença e, possivelmente, vantagem, dos crossovers de 2 pontos e uniforme é a maior capacidade de combinação entre os padrões dos genitores. Essa característica, por sua vez, aumenta a diversidade dos filhos gerados, uma vez que mais padrões podem ser construídos. No caso do GA com elitismo, figura \ref{fig:questao62}, pouca diferença é notada na evolução do algoritmo com os diferentes tipos de cruzamento. No entanto, os últimos indivíduos revelam um salto de qualidade para o crossover uniforme que não é percebido nos demais. É possível que esse bom desenvolvimento final possua relação com o tipo de crossover, mas a relação não é auto evidente.
 
-Para o GA sem elitismo, mas apenas com normalização linear, o crossover uniforme foi, claramente, o pior operador entre os três. Isso se deve ao fato dele aumentar a recombinação de genes dos genitores o que, de certo modo, aumenta a aleatoriedade do processo de evolução que, sem o elitismo para garantir uma curva sempre crescente, mostra-se prejudicial para a evolução do problema. Os outros dois crossovers, de 1 e 2 pontos, fornecem resultados muito similares, mas com uma diferença, a opção de 2 pontos apresenta curva de evolução quase sempre crescente. Para averiguar se isso é devido ao crossover ou não, deveríamos treinar mais GA com essas características. Faremos isso na última seção.
+Para o GA sem elitismo, mas apenas com normalização linear, o crossover uniforme foi, claramente, o pior operador entre os três. Isso se deve ao fato dele aumentar a recombinação de genes dos genitores o que, de certo modo, aumenta a aleatoriedade do processo de evolução que, sem o elitismo para garantir uma curva sempre crescente, mostra-se prejudicial para a evolução do problema. Os outros dois crossovers, de 1 e 2 pontos, fornecem resultados muito similares, mas com uma diferença: a opção de 2 pontos apresenta curva de evolução quase sempre crescente. Para averiguar se isso é devido ao crossover ou não, deveríamos treinar mais GA com essas características. Faremos isso na última seção.
 
 \begin{figure}[H]
 	\centering
@@ -282,7 +282,7 @@ Dada a figura \ref{fig:questao82pontos}, podemos perceber que o perfil monotôni
 
 \textbf{GAP = 1\%}
 
-Anteriormente comentei que GAP's muito pequenos tornariam a evolução do algoritmo lenta e estagnada. Para verificar se isso, de fato, ocorre, foram gerados 6 GA's 2-3 com GAP=1\%, o menor valor possível no GADEMO. A imagem abaixo exibe os resultados.
+Anteriormente comentei que GAP's muito pequenos tornariam a evolução do algoritmo lenta e estagnada. Para verificar se isso, de fato, ocorre foram gerados 6 GA's 2-3 com GAP=1\%, o menor valor possível no GADEMO. A imagem abaixo exibe os resultados.
 
 \begin{figure}[H]
 	\centering
@@ -292,6 +292,10 @@ Anteriormente comentei que GAP's muito pequenos tornariam a evolução do algori
 \end{figure}
 
 Podemos notar que a suposição anterior não se mantém frente a esses resultados. Embora a evolução seja mais irregular, pois vemos vários degraus nas curvas da figura \ref{fig:questao8GAPpequeno}, ela é, obviamente, não constante e, na verdade, quase sempre crescente. A presença dos degraus pode ser explicada da seguinte maneira: com um GAP pequeno, muitos indivíduos são mantidos e apenas alguns novos são gerados. Com isso, as curvas apresentarão maiores porções horizontais, uma vez que de uma geração para outra pouca coisa será alterada.
+
+\section{Comentários Finais}
+
+O intuito das discussões realizadas em cada seção era estudar a implicação de cada parâmetro e operador na qualidade do Algoritmo Genético, comparando previsões e suposições teóricas com resultados reais. Embora muitos resultados tenham coincidido com a teoria, alguns não o fizeram, o que pode ser explicado pela característica estocástica do GA. Importante ressaltar que um GA não é um algoritmo puramente aleatório, mas existem aleatoriedades em sua evolução. Além disso, alguns resultados podem estar diferentes da teoria pois seria necessário executar diversos GA's com os mesmos parâmetros para perceber o comportamento médio do algoritmo. 
 
 	\bibliography{bibliografia} 
 	\bibliographystyle{plain}
