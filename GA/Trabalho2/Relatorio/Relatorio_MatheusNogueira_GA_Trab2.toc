@@ -1,0 +1,10 @@
+\babel@toc {brazil}{}
+\contentsline {section}{\numberline {1}Apresentação do Problema e comentários iniciais}{1}{}%
+\contentsline {section}{\numberline {2}GA com parâmetros iniciais dados}{2}{}%
+\contentsline {section}{\numberline {3}Variação de max\_num\_iterarion}{2}{}%
+\contentsline {section}{\numberline {4}Variação de population\_size}{2}{}%
+\contentsline {section}{\numberline {5}Variação de mutation\_probability}{2}{}%
+\contentsline {section}{\numberline {6}Variação de elit\_ratio}{3}{}%
+\contentsline {section}{\numberline {7}Variação de crossover\_probability}{3}{}%
+\contentsline {section}{\numberline {8}Variação de parents\_portion}{3}{}%
+\contentsline {section}{\numberline {9}Variação de crossover\_type}{3}{}%
