@@ -3,7 +3,7 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Relatorio_MatheusNogueira_GA_Trab2.aux
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 I couldn't open database file bibliografia.bib
----line 14 of file Relatorio_MatheusNogueira_GA_Trab2.aux
+---line 18 of file Relatorio_MatheusNogueira_GA_Trab2.aux
  : \bibdata{bibliografia
  :                      }
 I'm skipping whatever remains of this command

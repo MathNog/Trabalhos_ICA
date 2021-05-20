@@ -49,9 +49,11 @@ O objetivo é avaliar e testar todos os parâmetros do Algoritmo Genético para 
 	\label{fig:rastriginfunction}
 \end{figure}
 
-Em cada seção desse relatório será variado algum parâmetro do algoritmo genético com o intuito de melhorar a minimização da função Rastrigin, com exceção da próxima seção que apresentará os resultados para os parâmetros iniciais como foram fornecidos no arquivo python. Para visualizar e comparar resultados, serão fornecidas tabelas com os valores adotados para os parâmetros e imagens dos gráficos gerados pelo código.
+Em cada seção desse relatório será variado algum parâmetro do algoritmo genético com o intuito de melhorar a minimização da função Rastrigin, com exceção da próxima seção que apresentará os resultados para os parâmetros iniciais padrões da biblioteca. Para visualizar e comparar resultados, serão fornecidas tabelas com os valores adotados para os parâmetros e imagens dos gráficos gerados pelo código.
 
 Os parâmetros que serão variados são \textit{max\_num\_iterarion}, \textit{population\_size}, \textit{mutation\_probability}, \textit{elit\_ratio}, \textit{crossover\_probability}, \textit{parents\_portion} e \textit{crossover\_type}. Sempre será variado um parâmetro por vez, mantendo os demais iguais ao GA inicial. Isso será feito para avaliar o impacto de cada parâmetro na qualidade do GA. Ao final, será executado um GA com os melhores valores para cada parâmetro variado.
+
+Serão sempre realizados 5 experimentos para cada configuração de GA e a análise será realizada com base nos resultamos médios de cada configuração.
 
 \section{GA com parâmetros iniciais dados}
 
@@ -61,17 +63,24 @@ Os parâmetros utilizados no GA são:
 	\begin{tabular}{|l|l|l|l|}
 		\hline
 		max\_num\_iterarion    & population\_size & mutation\_probability & elit\_ratio \\ \hline
-		100                   & 200               & 0.001                     & 0.01           \\ \hline
+		100                   & 100               & 0.1                     & 0.01           \\ \hline
 		crossover\_probability & parents\_portion & crossover\_type       &             \\ \hline
-		0.6                      & 0.5                & OnePoint                     &             \\ \hline
+		0.5                     & 0.3                & Uniform                     &             \\ \hline
 	\end{tabular}
 \end{table}
 
 \section{Variação de max\_num\_iterarion} 
 
-\textbf{É O NUMERO DE GERAÇÕES????}
-
 Esse parâmetro define por quanto tempo nosso algoritmo ficará executando, o que, em outras palavras, significa a quantidade máxima de gerações. É importante que esse valor não seja pequeno demais para que a solução possua tempo para evoluir até uma solução razoável. Por outro lado, um valor alto pode ser desnecessário caso o algoritmo convirja para algum valor ótimo em menos gerações que o número máximo.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multicolumn{4}{|l|}{Número máximo de gerações} \\ \hline
+		10   & 50    & 200    & 500    \\ \hline
+	\end{tabular}
+\end{table}
 
 \section{Variação de population\_size}
 
@@ -82,6 +91,15 @@ O tamanho da população é a quantidade de indivíduos em cada geração. Podem
 Variar a taxa de mutação é variar a aleatoriedade do processo de evolução do GA, uma vez que uma mutação é uma alteração aleatória em alguns dos genes, ou indivíduos, do algoritmo. Valores de mutação muito altos geram processos muito aleatórios que podem frear a evolução da minimização, embora uma taxa pequena seja importante para aumentar as chances do algoritmo ser capaz de gerar todas as combinações de indivíduos.
 
 A tabela abaixo exibe os diferentes valores de taxa de mutação testados:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multicolumn{4}{|l|}{Taxa de Mutação} \\ \hline
+		0.001    & 0.25    & 0.5    & 0.75    \\ \hline
+	\end{tabular}
+\end{table}
 
 \section{Variação de elit\_ratio}
 
@@ -95,6 +113,15 @@ Variar a taxa de crossover significa variar a taxa com a qual o algoritmo gera n
 
 A tabela abaixo exibe os diferentes valores de taxa de crossover testados:
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multicolumn{4}{|l|}{Taxa de Crossover} \\ \hline
+		0    & 0.25    & 0.75    & 1    \\ \hline
+	\end{tabular}
+\end{table}
+
 \section{Variação de parents\_portion}
 
 \textbf{DUVIDA: ISSO AQUI TA MUITO PARECIDO COM ELITISMO}
@@ -102,6 +129,15 @@ A tabela abaixo exibe os diferentes valores de taxa de crossover testados:
 \section{Variação de crossover\_type}
 
 São três os tipos de crossover disponíveis: um ponto, dois pontos e uniforme. Enquanto os dois primeiros simplesmente escolhem, aleatoriamente, um ou dois pontos de corte do gene para cruzamento, o último utiliza um padrão, também aleatório, para comparar com os progenitores. Os dois últimos tipos, dois pontos e uniforme, são capazes de combinar todos os padrões dos progenitores, enquanto o de um ponto não.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\multicolumn{3}{|l|}{Tipos de Crossover} \\ \hline
+		OnePoint    & TwoPoints    & Uniform    \\ \hline
+	\end{tabular}
+\end{table}
 	
 	\bibliography{bibliografia} 
 	\bibliographystyle{plain}
