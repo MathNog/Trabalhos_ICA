@@ -34,7 +34,7 @@ mutation_probability=0.001
 elit_ratio=0.01
 crossover_probability=0.6
 parents_portion=0.5
-crossover_type= 'one_point'
+crossover_type= 'uniform'
 selection_type='roulette'
 num_experimentos=5
 

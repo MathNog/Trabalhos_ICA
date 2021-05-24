@@ -32,7 +32,7 @@
 	
 	
 \begin{abstract}
-	Este documento consiste no relatório do trabalho 2 do módulo de Algoritmos Genéticos da disciplina ENG1456 da PUC-Rio. O objetivo deste trabalho é estudar diferentes modelos de Algoritmos Genéticos para a tentativa de otimização da função Rastrigin. Foi utilizada a biblioteca geneticalgorithm2 para Python. Foram consultados os materiais de aula, o livro \cite{davis1991handbook} e outros materiais devidamente referenciados. 
+	Este documento consiste no relatório do trabalho 2 do módulo de Algoritmos Genéticos da disciplina ENG1456 da PUC-Rio. O objetivo deste trabalho é estudar diferentes modelos de Algoritmos Genéticos para a tentativa de otimização da função Rastrigin. Foi utilizada a biblioteca geneticalgorithm2 para Python. Foram consultados os materiais de aula, o livro \cite{davis1991handbook} e outros materiais devidamente referenciados. Além disso, tudo que foi produzido para a realização deste trabalho encontra-se no repositório \cite{repositorio}
 \end{abstract}
 	
 \section{Apresentação do Problema e comentários iniciais}
@@ -86,17 +86,27 @@ Esse parâmetro define por quanto tempo nosso algoritmo ficará executando, o qu
 
 O tamanho da população é a quantidade de indivíduos em cada geração. Podemos pensar na variação desse parâmetro como uma intensificação de busca paralela. Quanto mais indivíduos na população, maior o paralelismo da busca pela solução ótima, embora exija mais capacidade computacional. Uma população pequena demais levaria muito tempo para alcançar um valor de aptidão específico enquanto que uma população maior o alcançaria mais rápido.
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\multicolumn{4}{|l|}{Tamanho da População}& Padrão \\ \hline
+		10   & 50    & 200    & 500   & 100 \\ \hline
+	\end{tabular}
+\end{table}
+
 \section{Variação de mutation\_probability}
 
 Variar a taxa de mutação é variar a aleatoriedade do processo de evolução do GA, uma vez que uma mutação é uma alteração aleatória em alguns dos genes, ou indivíduos, do algoritmo. Valores de mutação muito altos geram processos muito aleatórios que podem frear a evolução da minimização, embora uma taxa pequena seja importante para aumentar as chances do algoritmo ser capaz de gerar todas as combinações de indivíduos.
 
 A tabela abaixo exibe os diferentes valores de taxa de mutação testados:
 
-\begin{table}[]
+\begin{table}[H]
+	\centering
 	\begin{tabular}{|l|l|l|l|l|}
 		\hline
 		\multicolumn{4}{|l|}{Taxa de Mutação} & Padrão \\ \hline
-		0.001    & 0.25    & 0.5    & 0.75    & 0.1    \\ \hline
+		0.001    & 0.3    & 0.7    & 1.0    & 0.1    \\ \hline
 	\end{tabular}
 \end{table}
 
