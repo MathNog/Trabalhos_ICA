@@ -116,9 +116,22 @@ Esse parâmetro configura o elitismo do algoritmo genético, sendo a taxa em si 
 
 A tabela abaixo exibe os diferentes valores de taxa de elitismo testados:
 
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+		\hline
+		\multicolumn{3}{|l|}{Taxa de Elitismo} & Padrão \\ \hline
+		0.0    & 0.001    & 0.1    & 0.01    \\ \hline
+	\end{tabular}
+\end{table}
+
 \section{Variação de crossover\_probability}
 
 Variar a taxa de crossover significa variar a taxa com a qual o algoritmo gera novos descendentes a partir dos progenitores. Altas taxas de crossover aumentam a combinação de progenitores para a geração de filhos, enquanto baixas taxas fazem com que mais filhos sejam idênticos aos pais. Taxas altas demais não são interessantes por "embaralhar" demais os filhos, fazendo com que o perfil da evolução possa ser perdido. Por outro lado, taxas pequenas demais também não são interessantes por diminuir a variabilidade genética dos filhos, o que pode frear a evolução.
+
+\textbf{COMENTAR SOBRE VALOR LIMITE DEVIDO AO PARENT PORTION}
+
+\textbf{PROBLEMA AO RODAR COM TAXA 0}
 
 A tabela abaixo exibe os diferentes valores de taxa de crossover testados:
 
