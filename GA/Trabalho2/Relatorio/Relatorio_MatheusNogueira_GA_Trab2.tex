@@ -146,7 +146,16 @@ A tabela abaixo exibe os diferentes valores de taxa de crossover testados:
 
 \section{Variação de parents\_portion}
 
-\textbf{DUVIDA: ISSO AQUI TA MUITO PARECIDO COM ELITISMO}
+A definição desse parâmetro na documentação da biblioteca não é muito clara e e confunde com a definição de elit\_ratio. Suponho, com base no que entendi e discuti com a professora, que a porção de pais que o GA mantém não é, necessariamente, a melhor. Essa hipótese ganha força pelo fato de que a porcentagem \textit{parants\_portion} inclui, segundo a documentação, a porcentagem definida em \textit{elit\_ratio}. Dito isso, a análise do impacto deste parâmetro sozinho talvez não traga muitas informações interessantes. De todo modo, foram testados diferentes valores, assim como descrito na tabela abaixo:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\multicolumn{4}{|l|}{Porcentagem de Pais mantidos} & Padrão \\ \hline
+		0.02    & 0.1    & 0.7    & 1   &0.3 \\ \hline
+	\end{tabular}
+\end{table}
 
 \section{Variação de crossover\_type}
 
