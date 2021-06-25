@@ -168,8 +168,171 @@ As variáveis de entrada \textit{vl\_Localização} e \textit{vl\_Padrao\_Obra} 
 
 \subsection{Montando o Sistema de Inferência Fuzzy}
 
+Comecemos montando o sistema de inferência assim como descrito na figura \ref{fig:esquemasif}. Para isso, ainda é usado o \textit{FuzzyTech} e o arquivo disponibilizado na plataforma EAD. O \textit{SIF} montado é apresentado abaixo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Imagens/financiamento/SIF_FuzzyTech}
+	\caption{SIF do Problema, disponibilizado no EAD}
+	\label{fig:siffuzzytech}
+\end{figure}
+
+A figura abaixo exibe os valores linguísticos das variáveis de entrada e, logo abaixo, as regras originais.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Imagens/financiamento/VariaveisOriginais}
+	\caption{Regras originais do SIF}
+	\label{fig:variaveisoriginais}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Imagens/financiamento/RegrasOriginais}
+	\caption{Regras Originais dos 4 blocos de regras}
+	\label{fig:regrasoriginaisFinanciamento}
+\end{figure}
+
+Por fim, a figura abaixo exibe os conjuntos fuzzy, implementados como \textit{singletons} da variável de saída.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Imagens/financiamento/CreditoFinalOriginal}
+	\caption{Conjuntos fuzzy de saída}
+	\label{fig:creditofinaloriginal}
+\end{figure}
+
+Como o enunciado do trabalho solicita apenas os cálculos das saídas e a resposta final do sistema, \textbf{não foram alteradas} as regras e conjuntos fuzzy do arquivo disponibilizado na plataforma EAD. Foram apenas realizados os cálculos com base nos parâmetros originais do arquivo.
+
 \subsection{Respostas Manuais}
 
+Será utilizado o operador \textbf{mínimo} para a norma-t do \textit{modus ponens generalizado}, para a implicação e para o conectivo \textit{e}. Para o conectivo \textbf{ou} será usado o operador \textbf{max}.
+
+Vamos fazer a inferência por bloco de regras. Primeiramente, dados os valores das variáveis de minha matricula, cada variável possui grau de pertinência diferente de zero para os seguintes conjuntos:
+
+\begin{itemize}
+	\item vl\_Localização = 50 $\to$ \textit{boa(100\%)} e \textit{ruim(18\%)}
+	\item vl\_Padrao\_Obra = 71 $\to$ \textit{padrão(48\%)} e \textit{muito\_bom(52\%)}
+	\item vl\_Patrimonio = 58 $\to$ \textit{médio(84\%)} e \textit{alto(16\%)}
+	\item vl\_nivel\_Receita = 50 $\to$ \textit{médio(100\%)}
+	\item vl\_taxa\_Juros = 50	$\to$ \textit{média(50\%)} e \textit{alta(33\%)}
+\end{itemize}
+
+Comecemos pelo bloco de regras \textit{Aval\_Garantias}. Com base nos valores de função de pertinência acima, as regras ativadas desse bloco são:
+\begin{align*}
+	vl\_Patrimonio.baixo\&vl\_nivel\_Receita.medio&\to vl\_Garantias.baixa\\
+	vl\_Patrimonio.medio\&vl\_nivel\_Receita.baixo&\to vl\_Garantias.baixa\\
+	vl\_Patrimonio.medio\&vl\_nivel\_Receita.medio&\to vl\_Garantias.media\\
+	vl\_Patrimonio.medio\&vl\_nivel\_Receita.alto&\to vl\_Garantias.alta\\
+	vl\_Patrimonio.alto\&vl\_nivel\_Receita.baixo&\to vl\_Garantias.media\\
+	vl\_Patrimonio.alto\&vl\_nivel\_Receita.medio&\to vl\_Garantias.media\\
+	vl\_Patrimonio.alto\&vl\_nivel\_Receita.alto&\to vl\_Garantias.alta
+\end{align*}
+
+Sabendo o grau de pertinência de cada variável a cada conjunto, podemos escrever as operações abaixo:
+
+\begin{align*}
+	min(min(0,1),&\mu_{baixa}(grnt))\\
+	min(min(0.84,0),&\mu_{baixa}(grnt))\\
+	min(min(0.84,1),&\mu_{media}(grnt))\\
+	min(min(0.84,0),&\mu_{alta}(grnt))\\
+	min(min(0.16,0),&\mu_{media}(grnt))\\
+	min(min(0.16,1),&\mu_{media}(grnt))\\
+	min(min(0.16,0),&\mu_{alta}(grnt))
+\end{align*}
+
+Em seguida, temos:
+\begin{align*}
+	min(0,&\mu_{baixa}(grnt))\\
+	min(0,&\mu_{baixa}(grnt))\\
+	min(0.84,&\mu_{media}(grnt))\\
+	min(0,&\mu_{alta}(grnt))\\
+	min(0,&\mu_{media}(grnt))\\
+	min(0.16,&\mu_{media}(grnt))\\
+	min(0,&\mu_{alta}(grnt))
+\end{align*}
+
+Fazendo a união das regras:
+\begin{equation}\label{eq:uniaoRegrasGarantia}
+	max(min(0,\mu_{baixa}(grnt)),min(0,\mu_{media}(grnt)),min(0,\mu_{alta}(grnt)))
+\end{equation}\\
+
+Façamos o mesmo procedimento para o bloco de regras \textit{vl\_nivel\_Empreend}:
+\begin{align*}
+	vl\_Localizacao.ruim\&vl\_nivel\_Padrao\_Obra.padrao&\to vl\_nivel\_Empreend.medio\\
+	vl\_Localizacao.ruim\&vl\_nivel\_Padrao\_Obra.muito\_Bom&\to vl\_nivel\_Empreend.medio\\
+	vl\_Localizacao.boa\&vl\_nivel\_Padrao\_Obra.padrao&\to vl\_nivel\_Empreend.medio\\
+	vl\_Localizacao.boa\&vl\_nivel\_Padrao\_Obra.muito\_Bom&\to vl\_nivel\_Empreend.alto\\
+	vl\_Localizacao.excelente\&vl\_nivel\_Padrao\_Obra.padrao&\to vl\_nivel\_Empreend.medio\\
+	vl\_Localizacao.excelenteuim\&vl\_nivel\_Padrao\_Obra.muito\_Bom&\to vl\_nivel\_Empreend.alto
+\end{align*}
+
+\begin{align*}
+	min(min(0.18,0.48),&\mu_{medio}(nivel\_Empreend))\\
+	min(min(0.18,0.52),&\mu_{medio}(nivel\_Empreend))\\
+	min(min(1,0.48),&\mu_{medio}(nivel\_Empreend))\\
+	min(min(1,0.52),&\mu_{alto}(nivel\_Empreend))\\
+	min(min(0,0.48),&\mu_{medio}(nivel\_Empreend))\\
+	min(min(0,0.52),&\mu_{alto}(nivel\_Empreend))
+\end{align*}
+
+\begin{align*}
+	min(0.18,&\mu_{medio}(nivel\_Empreend))\\
+	min(0.18,&\mu_{medio}(nivel\_Empreend))\\
+	min(0.48,&\mu_{medio}(nivel\_Empreendgrnt))\\
+	min(0.52,&\mu_{alto}(nivel\_Empreend))\\
+	min(0,&\mu_{medio}(nivel\_Empreend))\\
+	min(0,&\mu_{alto}(nivel\_Empreend))
+\end{align*}
+
+Fazendo a união:
+\begin{equation}\label{eq:uniaoRegrasEmpreend}
+	max(min(0,\mu_{medio}(nivel\_Empreend)),min(0,\mu_{alto}(nivel\_Empreend)))
+\end{equation}\\
+
+Fazendo o mesmo procedimento para o bloco de regras \textit{Fator\_de\_Reducao}, temos:
+\begin{align*}
+	vl\_nivel\_Receita.baixo\&vl\_tx\_Juros.media&\to vl\_perc\_Credito.muito\_baixo\\
+	vl\_nivel\_Receita.baixo\&vl\_tx\_Juros.alta&\to vl\_perc\_Credito.muito\_baixo\\
+	vl\_nivel\_Receita.medio\&vl\_tx\_Juros.alta&\to vl\_perc\_Credito.muito\_baixo\\
+\end{align*}
+\begin{align*}
+	min(min(0,0.5),&\mu_{muito\_baixo}(perc\_Cred))\\
+	min(min(0,0.33),&\mu_{muito\_baixo}(perc\_Cred))\\
+	min(min(1,0.33),&\mu_{muito\_baixo}(perc\_Cred))
+\end{align*}
+\begin{align*}
+	min(0),&\mu_{muito\_baixo}(perc\_Cred))\\
+	min(0,&\mu_{muito\_baixo}(perc\_Cred))\\
+	min(0.33,&\mu_{muito\_baixo}(perc\_Cred))
+\end{align*}
+Fazendo a união:
+\begin{equation}\label{eq:uniaoRegrasPerceqCred}
+	max(min(0,\mu_{muito\_baixo}(perc\_Cred)))
+\end{equation}\\
+
+Por fim, o último bloco de regras, \textit{BR\_Nivel\_Credito}:
+\begin{align*}
+	vl\_Garantias.media\&vl\_nivel\_Empreen.baixo&\to vl\_perc\_Credito.muito\_baixo\\
+	vl\_Garantias.media\&vl\_nivel\_Empreen.medio&\to vl\_perc\_Credito.medio\\
+	vl_nivel\_Empreen.alto&\to vl\_perc\_Credito.alto\\
+	vl\_Garantias.alta\&vl\_nivel\_Empreen.alto&\to vl\_perc\_Credito.muito_alto\\
+	vl\_Garantias.alta\&vl\_nivel\_Empreen.medio&\to vl\_perc\_Credito.alto
+\end{align*}
+\begin{align*}
+	min(min(\mu_{media}(grnt),\mu_{baixo}(nivel\_Empreend)),&\mu_{muito\_baixo}(perc\_Cred))\\
+	min(min(\mu_{media}(grnt),\mu_{medio}(nivel\_Empreend)),&\mu_{medio}(perc\_Cred))\\
+	min(\mu_{alto}(nivel\_Empreend),&\mu_{alto}(perc\_Cred))\\
+	min(min(\mu_{alta}(grnt),\mu_{alto}(nivel\_Empreend)),&\mu_{muito\_alto}(perc\_Cred))\\
+	min(min(\mu_{alta}(grnt),\mu_{medio}(nivel\_Empreend)),&\mu_{alto}(perc\_Cred))
+\end{align*}
+	
 \subsection{Respostas FuzzyTech}
+
+Utilizando as variáveis e regras definidas nas seções anteriores, usamos o \textit{FuzzyTech} para calcular a saída para fins de comparação com as contas manuais.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Imagens/financiamento/ResultadoFinalOriginal}
+	\caption{Quantidade de crédito recebida}
+	\label{fig:resultadofinaloriginal}
+\end{figure}
 
 \end{document}

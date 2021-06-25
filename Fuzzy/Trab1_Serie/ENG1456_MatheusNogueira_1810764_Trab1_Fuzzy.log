@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.6.6)  25 JUN 2021 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.6.6)  25 JUN 2021 00:45
 entering extended mode
-**./ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.tex
-(ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.tex
+**./ENG1456_MatheusNogueira_1810764_Trab1_Fuzzy.tex
+(ENG1456_MatheusNogueira_1810764_Trab1_Fuzzy.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> xparse <2020-03-03>
 (C:\Users\matno_5\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -221,8 +221,8 @@ dftex.def
 File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count275
 \l__pdf_internal_box=\box51
-) (ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.aux)
-\openout1 = `ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.aux'.
+) (ENG1456_MatheusNogueira_1810764_Trab1_Fuzzy.aux)
+\openout1 = `ENG1456_MatheusNogueira_1810764_Trab1_Fuzzy.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
@@ -294,76 +294,19 @@ mkii
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-) (ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.toc)
+) (ENG1456_MatheusNogueira_1810764_Trab1_Fuzzy.toc)
 \tf@toc=\write3
-\openout3 = `ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.toc'.
+\openout3 = `ENG1456_MatheusNogueira_1810764_Trab1_Fuzzy.toc'.
 
-<Imagens/QR1/regrasOriginais.png, id=1, 623.04347pt x 317.988pt>
-File: Imagens/QR1/regrasOriginais.png Graphic file (type png)
-<use Imagens/QR1/regrasOriginais.png>
-Package pdftex.def Info: Imagens/QR1/regrasOriginais.png  used on input line 45
-.
-(pdftex.def)             Requested size: 409.71692pt x 209.11093pt.
-<Imagens/QR1/posicaoFinalOriginal.png, id=3, 517.30106pt x 304.29474pt>
-File: Imagens/QR1/posicaoFinalOriginal.png Graphic file (type png)
-<use Imagens/QR1/posicaoFinalOriginal.png>
-Package pdftex.def Info: Imagens/QR1/posicaoFinalOriginal.png  used on input li
-ne 51.
-(pdftex.def)             Requested size: 409.71692pt x 241.01701pt.
  [1
 
 {C:/Users/matno_5/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2 <./Imagens/QR1/regrasOriginais.png> <./Imagens/QR1/posicaoFinalOriginal.png>
-]
-<Imagens/QR1/alteracao1.png, id=20, 604.1772pt x 541.5432pt>
-File: Imagens/QR1/alteracao1.png Graphic file (type png)
-<use Imagens/QR1/alteracao1.png>
-Package pdftex.def Info: Imagens/QR1/alteracao1.png  used on input line 78.
-(pdftex.def)             Requested size: 318.66948pt x 285.63655pt.
-<Imagens/QR1/alteracao2.png, id=21, 600.8046pt x 520.8258pt>
-File: Imagens/QR1/alteracao2.png Graphic file (type png)
-<use Imagens/QR1/alteracao2.png>
-Package pdftex.def Info: Imagens/QR1/alteracao2.png  used on input line 93.
-(pdftex.def)             Requested size: 318.66948pt x 276.25093pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3 <./Imagens/QR1/alteracao1.png>]
-<Imagens/QR1/novaRegra1.png, id=26, 600.8046pt x 535.2798pt>
-File: Imagens/QR1/novaRegra1.png Graphic file (type png)
-<use Imagens/QR1/novaRegra1.png>
-Package pdftex.def Info: Imagens/QR1/novaRegra1.png  used on input line 107.
-(pdftex.def)             Requested size: 318.66948pt x 283.91747pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4 <./Imagens/QR1/alteracao2.png>]
-<Imagens/QR2/estadoOriginal.png, id=31, 602.25pt x 532.389pt>
-File: Imagens/QR2/estadoOriginal.png Graphic file (type png)
-<use Imagens/QR2/estadoOriginal.png>
-Package pdftex.def Info: Imagens/QR2/estadoOriginal.png  used on input line 120
+<Imagens/resultadoTeste_TUDO.png, id=11, 608.2725pt x 451.6875pt>
+File: Imagens/resultadoTeste_TUDO.png Graphic file (type png)
+<use Imagens/resultadoTeste_TUDO.png>
+Package pdftex.def Info: Imagens/resultadoTeste_TUDO.png  used on input line 76
 .
-(pdftex.def)             Requested size: 318.66948pt x 281.7099pt.
+(pdftex.def)             Requested size: 318.66948pt x 236.64325pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -373,13 +316,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5 <./Imagens/QR1/novaRegra1.png>]
-<Imagens/QR2/alteracao1.png, id=36, 599.841pt x 529.0164pt>
-File: Imagens/QR2/alteracao1.png Graphic file (type png)
-<use Imagens/QR2/alteracao1.png>
-Package pdftex.def Info: Imagens/QR2/alteracao1.png  used on input line 139.
-(pdftex.def)             Requested size: 364.19667pt x 321.20619pt.
-
+[2 <./Imagens/resultadoTeste_TUDO.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -388,14 +325,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[6 <./Imagens/QR2/estadoOriginal.png>]
-<Imagens/financiamento/esquemaSIF.png, id=41, 683.55376pt x 307.90031pt>
-File: Imagens/financiamento/esquemaSIF.png Graphic file (type png)
-<use Imagens/financiamento/esquemaSIF.png>
-Package pdftex.def Info: Imagens/financiamento/esquemaSIF.png  used on input li
-ne 162.
-(pdftex.def)             Requested size: 409.71692pt x 184.55838pt.
-
+[3]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -404,20 +334,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7 <./Imagens/QR2/alteracao1.png>]
-<Imagens/financiamento/SIF_FuzzyTech.png, id=48, 764.10469pt x 368.87813pt>
-File: Imagens/financiamento/SIF_FuzzyTech.png Graphic file (type png)
-<use Imagens/financiamento/SIF_FuzzyTech.png>
-Package pdftex.def Info: Imagens/financiamento/SIF_FuzzyTech.png  used on input
- line 174.
-(pdftex.def)             Requested size: 409.71692pt x 197.79532pt.
-<Imagens/financiamento/VariaveisOriginais.png, id=49, 874.467pt x 616.704pt>
-File: Imagens/financiamento/VariaveisOriginais.png Graphic file (type png)
-<use Imagens/financiamento/VariaveisOriginais.png>
-Package pdftex.def Info: Imagens/financiamento/VariaveisOriginais.png  used on 
-input line 182.
-(pdftex.def)             Requested size: 409.71692pt x 288.94754pt.
-
+[4]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -426,22 +343,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8 <./Imagens/financiamento/esquemaSIF.png> <./Imagens/financiamento/SIF_FuzzyT
-ech.png>]
-<Imagens/financiamento/RegrasOriginais.png, id=55, 635.37375pt x 568.37344pt>
-File: Imagens/financiamento/RegrasOriginais.png Graphic file (type png)
-<use Imagens/financiamento/RegrasOriginais.png>
-Package pdftex.def Info: Imagens/financiamento/RegrasOriginais.png  used on inp
-ut line 189.
-(pdftex.def)             Requested size: 364.19667pt x 325.80615pt.
-<Imagens/financiamento/CreditoFinalOriginal.png, id=56, 484.05844pt x 219.82124
-pt>
-File: Imagens/financiamento/CreditoFinalOriginal.png Graphic file (type png)
-<use Imagens/financiamento/CreditoFinalOriginal.png>
-Package pdftex.def Info: Imagens/financiamento/CreditoFinalOriginal.png  used o
-n input line 197.
-(pdftex.def)             Requested size: 318.66948pt x 144.7202pt.
-
+[5]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -450,8 +352,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9 <./Imagens/financiamento/VariaveisOriginais.png> <./Imagens/financiamento/Re
-grasOriginais.png>]
+[6]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -460,16 +361,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10 <./Imagens/financiamento/CreditoFinalOriginal.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
-
- []
-
-
-Overfull \hbox (33.48433pt too wide) detected at line 265
-[]
- []
-
+[7]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -478,65 +370,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
-
- []
-
-<Imagens/financiamento/ResultadoFinalOriginal.png, id=70, 395.22656pt x 117.438
-75pt>
-File: Imagens/financiamento/ResultadoFinalOriginal.png Graphic file (type png)
-<use Imagens/financiamento/ResultadoFinalOriginal.png>
-Package pdftex.def Info: Imagens/financiamento/ResultadoFinalOriginal.png  used
- on input line 333.
-(pdftex.def)             Requested size: 364.19667pt x 108.21877pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13 <./Imagens/financiamento/ResultadoFinalOriginal.png>]
-(ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.aux) ) 
+[8] (ENG1456_MatheusNogueira_1810764_Trab1_Fuzzy.aux) ) 
 Here is how much of TeX's memory you used:
- 4211 strings out of 479334
- 62050 string characters out of 2856135
- 396339 words of memory out of 3000000
- 21605 multiletter control sequences out of 15000+200000
- 410256 words of font info for 50 fonts, out of 3000000 for 9000
+ 4103 strings out of 479334
+ 58259 string characters out of 2856135
+ 391207 words of memory out of 3000000
+ 21509 multiletter control sequences out of 15000+200000
+ 410602 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,74p,839b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\matno_5\AppData\L
-ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/matno_5/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users
-/matno_5/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pf
-b><C:/Users/matno_5/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb><C:/Users/matno_5/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Users/matno_5/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb><C:/Users/matno_5/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/matno_5/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matno_5/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.pdf (13 pages, 26
-15706 bytes).
+ 68i,14n,74p,590b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\matno_5\AppDa
+ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/matno_
+5/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/U
+sers/matno_5/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx1
+2.pfb><C:/Users/matno_5/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb><C:/Users/matno_5/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmmi12.pfb><C:/Users/matno_5/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/matno_5/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/matno_5/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/matno_5/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m
+atno_5/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+<C:/Users/matno_5/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmti12.pfb>
+Output written on ENG1456_MatheusNogueira_1810764_Trab1_Fuzzy.pdf (8 pages, 179
+991 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
+ 77 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

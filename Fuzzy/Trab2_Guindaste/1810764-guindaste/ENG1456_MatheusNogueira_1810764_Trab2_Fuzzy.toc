@@ -7,5 +7,5 @@
 \contentsline {section}{\numberline {2}Parte 2 - Problema Financiamento Imobiliário}{7}{}%
 \contentsline {subsection}{\numberline {2.1}Comentários Iniciais}{7}{}%
 \contentsline {subsection}{\numberline {2.2}Montando o Sistema de Inferência Fuzzy}{8}{}%
-\contentsline {subsection}{\numberline {2.3}Respostas Manuais}{8}{}%
-\contentsline {subsection}{\numberline {2.4}Respostas FuzzyTech}{8}{}%
+\contentsline {subsection}{\numberline {2.3}Respostas Manuais}{10}{}%
+\contentsline {subsection}{\numberline {2.4}Respostas FuzzyTech}{13}{}%
