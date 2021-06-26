@@ -229,30 +229,22 @@ Comecemos pelo bloco de regras \textit{Aval\_Garantias}. Com base nos valores de
 Sabendo o grau de pertinência de cada variável a cada conjunto, podemos escrever as operações abaixo:
 
 \begin{align*}
-	min(min(0,1),&\mu_{baixa}(grnt))\\
-	min(min(0.84,0),&\mu_{baixa}(grnt))\\
-	min(min(0.84,1),&\mu_{media}(grnt))\\
-	min(min(0.84,0),&\mu_{alta}(grnt))\\
-	min(min(0.16,0),&\mu_{media}(grnt))\\
-	min(min(0.16,1),&\mu_{media}(grnt))\\
-	min(min(0.16,0),&\mu_{alta}(grnt))
+	min(0,1)=0,&\mu_{baixa}(grnt)\\
+	min(0.84,0)=0,&\mu_{baixa}(grnt)\\
+	min(0.84,1)=0.84,&\mu_{media}(grnt)\\
+	min(0.84,0)=0,&\mu_{alta}(grnt)\\
+	min(0.16,0)=0,&\mu_{media}(grnt))\\
+	min(0.16,1)=0.16,&\mu_{media}(grnt)\\
+	min(0.16,0)=0,&\mu_{alta}(grnt)
 \end{align*}
 
-Em seguida, temos:
+
+Fazendo a união das regras ou seja, o máximo de entre as regras acima, temos:
 \begin{align*}
-	min(0,&\mu_{baixa}(grnt))\\
-	min(0,&\mu_{baixa}(grnt))\\
-	min(0.84,&\mu_{media}(grnt))\\
-	min(0,&\mu_{alta}(grnt))\\
-	min(0,&\mu_{media}(grnt))\\
-	min(0.16,&\mu_{media}(grnt))\\
-	min(0,&\mu_{alta}(grnt))
+	\mu_{media}(grnt)=0.84\\
+	\mu_{alta}(grnt)=0\\
+	\mu_{baixa}(grnt)=0
 \end{align*}
-
-Fazendo a união das regras:
-\begin{equation}\label{eq:uniaoRegrasGarantia}
-	max(min(0,\mu_{baixa}(grnt)),min(0,\mu_{media}(grnt)),min(0,\mu_{alta}(grnt)))
-\end{equation}\\
 
 Façamos o mesmo procedimento para o bloco de regras \textit{vl\_nivel\_Empreend}:
 \begin{align*}
@@ -265,27 +257,19 @@ Façamos o mesmo procedimento para o bloco de regras \textit{vl\_nivel\_Empreend
 \end{align*}
 
 \begin{align*}
-	min(min(0.18,0.48),&\mu_{medio}(nivel\_Empreend))\\
-	min(min(0.18,0.52),&\mu_{medio}(nivel\_Empreend))\\
-	min(min(1,0.48),&\mu_{medio}(nivel\_Empreend))\\
-	min(min(1,0.52),&\mu_{alto}(nivel\_Empreend))\\
-	min(min(0,0.48),&\mu_{medio}(nivel\_Empreend))\\
-	min(min(0,0.52),&\mu_{alto}(nivel\_Empreend))
+	min(0.18,0.48)=0.18,&\mu_{medio}(nivel\_Empreend)\\
+	min(0.18,0.52)=0.18,&\mu_{medio}(nivel\_Empreend)\\
+	min(1,0.48)=0.48,&\mu_{medio}(nivel\_Empreend)\\
+	min(1,0.52)=0.52,&\mu_{alto}(nivel\_Empreend)\\
+	min(0,0.48)=0,&\mu_{medio}(nivel\_Empreend)\\
+	min(0,0.52)=0,&\mu_{alto}(nivel\_Empreend)
 \end{align*}
 
+Fazendo a união, ou seja, o máximo de entre as regras acima, temos:
 \begin{align*}
-	min(0.18,&\mu_{medio}(nivel\_Empreend))\\
-	min(0.18,&\mu_{medio}(nivel\_Empreend))\\
-	min(0.48,&\mu_{medio}(nivel\_Empreendgrnt))\\
-	min(0.52,&\mu_{alto}(nivel\_Empreend))\\
-	min(0,&\mu_{medio}(nivel\_Empreend))\\
-	min(0,&\mu_{alto}(nivel\_Empreend))
+	\mu_{alto}(nivel\_Empreend)=0.52\\
+	\mu_{medio}(nivel\_Empreend)=0.48
 \end{align*}
-
-Fazendo a união:
-\begin{equation}\label{eq:uniaoRegrasEmpreend}
-	max(min(0,\mu_{medio}(nivel\_Empreend)),min(0,\mu_{alto}(nivel\_Empreend)))
-\end{equation}\\
 
 Fazendo o mesmo procedimento para o bloco de regras \textit{Fator\_de\_Reducao}, temos:
 \begin{align*}
@@ -294,19 +278,15 @@ Fazendo o mesmo procedimento para o bloco de regras \textit{Fator\_de\_Reducao},
 	vl\_nivel\_Receita.medio\&vl\_tx\_Juros.alta&\to vl\_perc\_Credito.muito\_baixo\\
 \end{align*}
 \begin{align*}
-	min(min(0,0.5),&\mu_{muito\_baixo}(perc\_Cred))\\
-	min(min(0,0.33),&\mu_{muito\_baixo}(perc\_Cred))\\
-	min(min(1,0.33),&\mu_{muito\_baixo}(perc\_Cred))
+	min(0,0.5)=0,&\mu_{muito\_baixo}(perc\_Cred)\\
+	min(0,0.33)=0,&\mu_{muito\_baixo}(perc\_Cre))\\
+	min(1,0.33)=0.33,&\mu_{muito\_baixo}(perc\_Cred)
 \end{align*}
-\begin{align*}
-	min(0),&\mu_{muito\_baixo}(perc\_Cred))\\
-	min(0,&\mu_{muito\_baixo}(perc\_Cred))\\
-	min(0.33,&\mu_{muito\_baixo}(perc\_Cred))
-\end{align*}
-Fazendo a união:
-\begin{equation}\label{eq:uniaoRegrasPerceqCred}
-	max(min(0,\mu_{muito\_baixo}(perc\_Cred)))
-\end{equation}\\
+
+Fazendo a união, ou seja, o máximo de entre as regras acima, temos:
+\begin{equation*}
+	\mu_{muito\_baixo}(perc\_Cred)=0.33
+\end{equation*}
 
 Por fim, o último bloco de regras, \textit{BR\_Nivel\_Credito}:
 \begin{align*}
@@ -317,12 +297,38 @@ Por fim, o último bloco de regras, \textit{BR\_Nivel\_Credito}:
 	vl\_Garantias.alta\&vl\_nivel\_Empreen.medio&\to vl\_perc\_Credito.alto
 \end{align*}
 \begin{align*}
-	min(min(\mu_{media}(grnt),\mu_{baixo}(nivel\_Empreend)),&\mu_{muito\_baixo}(perc\_Cred))\\
-	min(min(\mu_{media}(grnt),\mu_{medio}(nivel\_Empreend)),&\mu_{medio}(perc\_Cred))\\
+	min(\mu_{media}(grnt),\mu_{baixo}(nivel\_Empreend)),&\mu_{muito\_baixo}(perc\_Cred)\\
+	min(\mu_{media}(grnt),\mu_{medio}(nivel\_Empreend)),&\mu_{medio}(perc\_Cred)\\
 	min(\mu_{alto}(nivel\_Empreend),&\mu_{alto}(perc\_Cred))\\
-	min(min(\mu_{alta}(grnt),\mu_{alto}(nivel\_Empreend)),&\mu_{muito\_alto}(perc\_Cred))\\
-	min(min(\mu_{alta}(grnt),\mu_{medio}(nivel\_Empreend)),&\mu_{alto}(perc\_Cred))
+	min(\mu_{alta}(grnt),\mu_{alto}(nivel\_Empreend)),&\mu_{muito\_alto}(perc\_Cred)\\
+	min(\mu_{alta}(grnt),\mu_{medio}(nivel\_Empreend)),&\mu_{alto}(perc\_Cred)
 \end{align*}
+
+Substituindo valores:
+
+\begin{align*}
+	min(0.84,0)=0,&\mu_{muito\_baixo}(perc\_Cred)\\
+	min(0.84,0.48)=0.48,&\mu_{medio}(perc\_Cred)\\
+	min(0.52)=0.52,&\mu_{alto}(perc\_Cred)\\
+	min(0,0.52)=0,&\mu_{muito\_alto}(perc\_Cred)\\
+	min(0,0.48)=0,&\mu_{alto}(perc\_Cred)
+\end{align*}
+
+Fazendo a união, ou seja, o máximo de entre as regras acima, considerando o valor obtido $\mu_{muito\_baixo}(perc\_Cred)=0.33$ no bloco de regras \textit{Fator\_de\_Reducao}, temos, por fim:
+
+\begin{align*}
+	\mu_{muito\_baixo}(perc\_Cred)=0.33\\
+	\mu_{medio}(perc\_Cred)=0.48\\
+	\mu_{alto}(perc\_Cred)=0.52
+\end{align*}
+
+Uma vez obtidos os graus de pertinência da variável de saída, precisamos realizar a desfuzzificação. Para tal, calcularemos o centro de massa dessas variáveis. Note que esses valores de grau de pertinência são, exatamente, os calculados pelo \textit{FuzzyTech}, exibidos na figura \ref{fig:creditofinaloriginal}
+
+\begin{equation*}
+	Centroide=\dfrac{0.33\cdot0+0.48\cdot50+0.52\cdot66}{0.33+0.48+0.52}=43.85
+\end{equation*}
+
+Logo, o cliente em questão deve receber $43.85\%$ do limite máximo de crédito.
 	
 \subsection{Respostas FuzzyTech}
 
@@ -334,5 +340,7 @@ Utilizando as variáveis e regras definidas nas seções anteriores, usamos o \t
 	\caption{Quantidade de crédito recebida}
 	\label{fig:resultadofinaloriginal}
 \end{figure}
+
+Note que o resultado está muito próximo do calculado. Um possível fonte de erro pode ser a análise dos gráficos para descobrir os valores dos graus de pertinência.
 
 \end{document}

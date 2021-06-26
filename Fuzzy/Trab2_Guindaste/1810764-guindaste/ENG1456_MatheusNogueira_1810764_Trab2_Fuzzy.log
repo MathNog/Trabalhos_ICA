@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.6.6)  25 JUN 2021 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.6.6)  25 JUN 2021 22:32
 entering extended mode
 **./ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.tex
 (ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.tex
@@ -434,13 +434,13 @@ File: Imagens/financiamento/RegrasOriginais.png Graphic file (type png)
 Package pdftex.def Info: Imagens/financiamento/RegrasOriginais.png  used on inp
 ut line 189.
 (pdftex.def)             Requested size: 364.19667pt x 325.80615pt.
-<Imagens/financiamento/CreditoFinalOriginal.png, id=56, 484.05844pt x 219.82124
-pt>
+<Imagens/financiamento/CreditoFinalOriginal.png, id=56, 493.0922pt x 223.58531p
+t>
 File: Imagens/financiamento/CreditoFinalOriginal.png Graphic file (type png)
 <use Imagens/financiamento/CreditoFinalOriginal.png>
 Package pdftex.def Info: Imagens/financiamento/CreditoFinalOriginal.png  used o
 n input line 197.
-(pdftex.def)             Requested size: 318.66948pt x 144.7202pt.
+(pdftex.def)             Requested size: 318.66948pt x 144.5031pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -461,12 +461,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10 <./Imagens/financiamento/CreditoFinalOriginal.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
-
- []
-
-
-Overfull \hbox (33.48433pt too wide) detected at line 265
+Overfull \hbox (33.48433pt too wide) detected at line 257
 []
  []
 
@@ -479,22 +474,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
-
- []
-
 <Imagens/financiamento/ResultadoFinalOriginal.png, id=70, 395.22656pt x 117.438
 75pt>
 File: Imagens/financiamento/ResultadoFinalOriginal.png Graphic file (type png)
 <use Imagens/financiamento/ResultadoFinalOriginal.png>
 Package pdftex.def Info: Imagens/financiamento/ResultadoFinalOriginal.png  used
- on input line 333.
+ on input line 339.
 (pdftex.def)             Requested size: 364.19667pt x 108.21877pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -515,10 +502,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [13 <./Imagens/financiamento/ResultadoFinalOriginal.png>]
 (ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.aux) ) 
 Here is how much of TeX's memory you used:
- 4211 strings out of 479334
- 62050 string characters out of 2856135
- 396339 words of memory out of 3000000
- 21605 multiletter control sequences out of 15000+200000
+ 4208 strings out of 479334
+ 61976 string characters out of 2856135
+ 397311 words of memory out of 3000000
+ 21602 multiletter control sequences out of 15000+200000
  410256 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,74p,839b,280s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -534,7 +521,7 @@ X/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/matno_5/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/matno_5/AppData
 /Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
 Output written on ENG1456_MatheusNogueira_1810764_Trab2_Fuzzy.pdf (13 pages, 26
-15706 bytes).
+18531 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
